@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="menustyle.css">
+        <style>@import url('https://fonts.cdnfonts.com/css/eagle-gt-ii');</style>
+        <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
+        <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
+        <h1>S-RECCER</h1>
+    </head>
+    <body>
+        <h3>About us</h3>
+        <b>Community favourite albums</b> 
+
+        <div style="position: relative; display: inline-block;">
+        <img id="image" src="1.jpg", width="700", length="300">
+
+        <button onclick="left ()", style="
+        position: absolute;
+        bottom: 135px;
+        top: 135px;
+        left: 1%;
+        padding: 0;
+        border: none;
+        background: none;
+        opacity: 1;">
+        <img src="left.png", width="100">
+    </button>
+
+        <button onclick="right ()", style="
+            position: absolute;
+            bottom: 135px;
+            top: 135px;
+            right: 1%;
+            padding: 0;
+            border: none;
+            background: none;
+            opacity: 1;">
+            <img src="right.png", width="100", style="
+            display: block;
+            margin:auto;">
+        </button>
+
+        <script>
+            let image = ["1.jpg","2.jpg", "3.jpg","4.jpg"];
+            let index = 0;
+
+            function right() {
+                index = (index + 1) % image.length;
+                document.getElementById("image").src = image[index];
+            }
+        </script>
+
+        
+        <script>
+            function left() {
+                index = (index - 1 + image.length) % image.length;
+                document.getElementById("image").src = image[index];
+    }
+</script>
+</div>
+
+<nav><a href="topAlbum.html">Top 10 List</a></nav>
+
+<li>Gabriel - <a href="topAlbum.html">Keshi</a></li>
+<li>Nectar - <a href="topAlbum.html">Joji</a></li>
+<li>Summer flows 0.02 - <a href="topAlbum.html">Wave to Earth</a></li>
+<li>Blue - <a href="topAlbum.html">Yung Kai</a></li>
+<li>placeholder - <a href="topAlbum.html">placeholder</a></li>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
