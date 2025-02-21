@@ -15,11 +15,10 @@
     </head>
     <body>
         <h3>About us</h3>
-        <b>Community favourite albums</b> 
-
+        <p>Community favourite albums</p> 
         <div style="position: relative; display: inline-block;">
         <img id="image" src="1.jpg", width="700", length="300">
-        <figcaption>Gabriel - Keshi</figcaption>
+        <figcaption id="ImgCapt" style="color: white;">Gabriel - Keshi</figcaption>
 
         <button onclick="left ()", style="
         position: absolute;
@@ -31,7 +30,7 @@
         background: none;
         opacity: 1;">
         <img src="left.png", width="100">
-    </button>
+        </button>
 
         <button onclick="right ()", style="
             position: absolute;
@@ -49,23 +48,19 @@
 
         <script>
             let image = ["1.jpg","2.jpg", "3.jpg","4.jpg"];
+            let ImgCapt = ["Gabriel - Keshi", "Nectar - Joji", "Summer Flows 0.02", "Blue - Yung Kai"];
             let index = 0;
-
             function right() {
                 index = (index + 1) % image.length;
                 document.getElementById("image").src = image[index];
+                document.getElementById("ImgCapt").textContent = ImgCapt[index];
             }
-        </script>
-
-        
-        <script>
             function left() {
                 index = (index - 1 + image.length) % image.length;
                 document.getElementById("image").src = image[index];
-    }
+                document.getElementById("ImgCapt").textContent = ImgCapt[index];}
 </script>
 </div>
-
 <nav><a href="topAlbum.html">Top 10 List</a></nav>
 
 <li>Gabriel - <a href="topAlbum.html">Keshi</a></li>
