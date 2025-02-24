@@ -21,6 +21,16 @@ h1{
     top: 0;
     z-index: 999;
 }
+h2{
+    color:white;
+    font-family:'eagle gt ii', sans-serif;
+    font-size: px;
+    background-color: none;
+    position: sticky;
+    top: 80px;
+    z-index: 999;
+}
+
 body{
     color:white;
     background-color: black;
