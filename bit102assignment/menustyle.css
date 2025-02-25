@@ -49,3 +49,10 @@ h3{
     padding: 0;
     padding-block-end: 50px;
 }
+div.imgnavbar{
+    display: flex;
+    justify-content: center;
+}
+div.fotorama{
+    padding: 10px;
+}
