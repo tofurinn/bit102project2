@@ -71,27 +71,41 @@ h2{
     margin-left:10px;
     border-bottom: 1px solid #fff;
 }
-div.favs a.prev, div.favs a.next {
-    font-size: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    margin: 10px 20px; /* Added horizontal margin to space out the buttons */
-}
-a.prev{
-    rotate: 180deg;
-}
-div.albumpics {
-    display: flex;
+div.topAlbum{
+    display: flex ;
     justify-content: center;
     align-items: center;
-    margin-left: 50px;
+    position: relative;
+}
+div.overlay{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    top: 50%;
+    margin: auto;
+    transform: translateY(-50%);
 }
 
-div.albumpics img {
-    width: 500px;
-    height: 500px;
-    object-fit: contain;
+div.left{
+    width: 100px;
+    padding: 0;
+    border: none;
+    background: none;
+    opacity: 1;
+}
+div.right{
+    width: 100px;
+    padding: 0;
+    border: none;
+    background: none;
+    opacity: 1;
+}
+div.imgnavbar{
+    display: flex;
+    justify-content: center;
+}
+div.fotorama{
+    padding: 10px;
 }

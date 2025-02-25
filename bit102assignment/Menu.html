@@ -14,69 +14,92 @@
     <body>
         <ul>
             <li><a class="menu" href="#home">
-                <img class='logo' src="/images/logo1.png"></a></li>
+                <img class='logo' src="images/logo1.png"></a></li>
             <li><a href="#news">about us</a></li>
             <li><a href="#search">
-                <img class='search' src="/images/search.png"></a></li>
+                <img class='search' src="images/search.png"></a></li>
                 <li id= 'searchbar'><input type="text" placeholder="Search Artist...">
             <li style="float:right"><a href="#profile">Profile</a></li>
           </ul>
         <h1>video here later</h1>
-        <div class='favs'>
-            <h2>COMMUNITY FAVORITES
-                <a class="prev" onclick="plusSlides(-1)">
-                    <img id="p" img src="/images/prev.png" alt="Previous"></a>
-                </a>
-                <a class="next" onclick="plusSlides(1)">
-                    <img id="n" img src="/images/next.png" alt="Next"></a>
-        </h2>
-<div class="albumpics">
-    <img src="/images/1.jpg" alt="GABRIEL by Keshi">
-    <div class="overlay">
-        <div class="albumdesc">GABRIEL (2022) by Keshi</div>
-</div>
-</div>
-<div class="albumpics">
-    <img src="/images/2.jpg" alt="Nectar by Joji">
-    <div class="overlay">
-        <div class="albumdesc">Nectar (2020) by Joji</div>
-    </div>
-</div>
-<div class="albumpics">
-    <img src="/images/3.jpg" alt="Summer Flows 0.02 by Wave to Earth">
-    <div class="overlay">
-        <div class="albumdesc">Summer Flows 0.02 (2023) by Wave to Earth</div>
-    </div>
-</div>
-<div class="albumpics">
-    <img src="/images/4.jpg" alt="Blue by Yung Kai">
-    <div class="overlay">
-        <div class="albumdesc">Blue (2024) by Yung Kai</div>
-    </div>
-</div>
-<script>
-    let albumIndex = 1;
-    showAlbum(albumIndex);
 
-    function plusSlides(n) {
-        showAlbum(albumIndex += n);
-    }
+        <div>
+            <div class="topAlbum">
+                <img id="image" src="1.jpg" ,="" width="700px" 
+                style="background-color: white;">
+                <div class="overlay">
+                    <div class="left">
+                        <button onclick="left ()" , style="
+                            padding: 0;
+                            background: none;
+                            border: none;">
+                            <img src="left.png" width="100">
+                        </button>
+                    </div>
+                    <div class="right">
+                        <button onclick="right ()" , style="
+                        padding: 0;
+                        background: none;
+                        border: none;">
+                            <img src="right.png"width="100">
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    function currentSlides(n) {
-        showAlbum(albumIndex = n);
-    }
+            <div class="imgnavbar" style="width: 100;">    
+                    <div class="fotorama" role="button" onclick="imgChange1()">
+                        <img src="1.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange2()">
+                        <img src="2.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange3()">
+                        <img src="3.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange4()">
+                        <img src="4.jpg" style="width: 80px;">
+                    </div>
+            </div>
+            <figcaption id="ImgCapt" style="color: white;">Gabriel - Keshi</figcaption>
 
-    function showAlbum(n) {
-        let albums = document.getElementsByClassName("albumpics");
-        if (n > albums.length) {albumIndex = 1}
-        if (n < 1) {albumIndex = albums.length}
-        for (let i = 0; i < albums.length; i++) {
-            albums[i].style.display = "none";
-        }
-        albums[albumIndex-1].style.display = "block";
-    }
-</script>
-
+            <script>
+                let image = ["1.jpg","2.jpg", "3.jpg","4.jpg"];
+                let ImgCapt = ["Gabriel - Keshi", "Nectar - Joji", "Summer Flows 0.02", "Blue - Yung Kai"];
+                let index = 0;
+                function right() {
+                    index = (index + 1) % image.length;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function left() {
+                    index = (index - 1 + image.length) % image.length;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];}
+    
+                function imgChange1() {
+                    index = 0;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                
+                function imgChange2() {
+                    index = 1;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function imgChange3() {
+                    index = 2;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function imgChange4() {
+                    index = 3;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+            </script>   
+        </div>
 <nav><a href="topAlbum.html">Top 10 List</a></nav>
 
 <li>Gabriel - <a href="topAlbum.html">Keshi</a></li>
@@ -84,7 +107,7 @@
 <li>Summer flows 0.02 - <a href="topAlbum.html">Wave to Earth</a></li>
 <li>Blue - <a href="topAlbum.html">Yung Kai</a></li>
 <li>placeholder - <a href="topAlbum.html">placeholder</a></li>
-        
+
         <script src="" async defer></script>
     </body>
 </html> 
