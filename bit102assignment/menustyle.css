@@ -12,47 +12,86 @@
     font-family: 'SF Automaton Extended', sans-serif;
     src: url('https://fonts.cdnfonts.com/css/sf-automaton');
 }
+ul{
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #fff;
+}    
+li{
+    float: left;
+}
+li a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+img.search{
+    width: 20px;
+    height: 20px;
+}
+img.vinyl{
+    width: 40px;
+    height: 40px;
+}
+img.logo{
+   width:120px;
+    height: 30px;
+}
 h1{
     color:white;
     font-family:'eagle gt ii', sans-serif;
     font-size: 50px;
     background-color: none;
-    position: sticky;
-    top: 0;
-    z-index: 999;
 }
-h2{
-    color:white;
-    font-family:'eagle gt ii', sans-serif;
-    font-size: px;
-    background-color: none;
-    position: sticky;
-    top: 80px;
-    z-index: 999;
-}
-
 body{
     color:white;
     background-color: black;
     font-family:'sf automaton', sans-serif;
-    margin: 0%;
+    margin:0%;
 }
-h3{
+h2{
     color:white;
     font-family:'sf automaton', sans-serif;
-    font-size: 30px;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+    margin-left:10px;
+    border-bottom: 1px solid #fff;
 }
-#image{
-    image-orientation:  ;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    padding-block-end: 50px;
+div.favs a.prev, div.favs a.next {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin: 10px 20px; /* Added horizontal margin to space out the buttons */
 }
-div.imgnavbar{
+a.prev{
+    rotate: 180deg;
+}
+div.albumpics {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-left: 50px;
 }
-div.fotorama{
-    padding: 10px;
+
+div.albumpics img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
 }
