@@ -11,7 +11,7 @@
         <style>@import url('https://fonts.cdnfonts.com/css/eagle-gt-ii');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
-        <link rel="stylesheet" href="menustyle.css">
+        <link rel="stylesheet" href="categoriestyle.css">
 
     </head>
     <body>
@@ -23,44 +23,129 @@
                 <img class='search' src="images/search.png"></a></li>
                 <li class='searchbar'><input type="text" placeholder="Search Artist...">
             <li style="float:right"><a href="#signup">Sign Up</a>
-          </ul>
-          <h1><a href="" id="Top" style="color: black; text-decoration: none;">Community's favourite Categories</a></h1>
+            </ul>
+            <h1><a href="" id="Top" style="color: black; text-decoration: none;">Community's favourite Categories</a></h1>
 
-        
-        <div class="container mt-4">
-            <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Rhythms n Blues</h5>
-                    <p class="card-text">Soul </p>
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#moreContent1">
-                        Show Artist
-                    </button>
-                    <div class="collapse mt-3" id="moreContent1">
-                        <p>Daniel Ceasar</p>
-                        <img src="images/daniel_ceasar.jpeg" class="img-fluid" alt="Extra Image">
-                        <img src="placeholder" class="img-fluid" alt="Extra Image">
+            <div class="container mt-4">
+                <div class="row">
+                    <!-- First Card -->
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat1.jpeg" class="card-img-top" alt="cat1">
+                            <div class="card-body">
+                                <h5 class="card-title">Rhythms n Blues</h5>
+                                <p class="card-text">Soul</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Rhythms n Blues"
+                                        data-artists="Daniel Caesar,Wave 2 Earth, SZA" 
+                                        data-images="images/daniel_ceasar.jpeg,images/3.jpg,images/Cat/sza.png"
+                                        data-links="DanielCeaser.html,Wave2Earth.html,SZA.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                    <!--second card -->
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat2.png" class="card-img-top" alt="cat2">
+                            <div class="card-body">
+                                <h5 class="card-title">Downer</h5>
+                                <p class="card-text">Depressed? </p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Downer"
+                                        data-artists="Joji,Wave 2 Earth,Jeff Bernat" 
+                                        data-images="images/2.jpg,images/3.jpg,images/Cat/JB.jpg"
+                                        data-links="Joji.html,Wave2Earth.html,JeffBernat.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--third card-->
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat3.jpg" class="card-img-top" alt="cat3">
+                            <div class="card-body">
+                                <h5 class="card-title">Chill</h5>
+                                <p class="card-text">Take it slow cuh </p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Chill"
+                                        data-artists="Luke Chiang,Bruno Major,Yung Kai " 
+                                        data-images="images/Cat/LC.jpg,images/Cat/BM.jpeg,images/4.jpg"
+                                        data-links="LukeChiang.html,BrunoMajor.html,YungKai.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth card-->
+                    <div class="col-md-4 mt-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat4.png" class="card-img-top" alt="cat4">
+                            <div class="card-body">
+                                <h5 class="card-title">Lovefool</h5>
+                                <p class="card-text">Who's on your mind gurl</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Lovefool"
+                                        data-artists="Beabadoobee,Laufey,Rex Orange County " 
+                                        data-images="images/Cat/bea.jpeg,images/Cat/Laufey.jpeg,images/Cat/ROC.jpeg"
+                                        data-links="Beabadoobee.html,Laufey.html,RexOrangeCounty.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
             </div>
-        </div>
-        <div class="container mt-4">
-            <div class="card" style="width: 18rem;">
-                <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Sad</h5>
-                    <p class="card-text">Depressed </p>
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#moreContent2">
-                        Show Artist
-                    </button>
-                    <div class="collapse mt-3" id="moreContent2">
-                        <p>Daniel Ceasar</p>
-                        <img src="images/2.jpg"img-fluid" alt="Extra Image">
-                        <img src="placeholder" class="img-fluid" alt="Extra Image">
-                    </div>
+            
+            
+            <!-- overlay popup -->
+            <div class="overlay" id="overlay">
+                <div class="popup">
+                    <span class="close-btn" onclick="closePopup()">X</span>
+                    <h1 id="popup-genre"></h1>
+                    <div class="artist-container" id="popup-content"></div>
                 </div>
             </div>
-        </div>  
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const overlay = document.getElementById("overlay");
+                    const popupContent = document.getElementById("popup-content");
+                    const popupGenre = document.getElementById("popup-genre");
 
+                    document.querySelectorAll(".show-more-btn").forEach(button => {
+                        button.addEventListener("click", function () {
+                            const genre = this.getAttribute("data-genre");
+                            const artistNames = this.getAttribute("data-artists").split(",");
+                            const artistImages = this.getAttribute("data-images").split(",");
+                            const artistLinks = this.getAttribute("data-links").split(","); // Fix: Support multiple links
+
+                            popupContent.innerHTML = ""; // Clear previous content
+                            popupGenre.textContent = genre;
+
+                            for (let i = 0; i < artistNames.length; i++) {
+                                let artistDiv = document.createElement("div");
+                                artistDiv.innerHTML = `
+                                    <img src="${artistImages[i]}" alt="${artistNames[i]}" class="img-fluid">
+                                    <h5><a href="${artistLinks[i]}" target="_blank">${artistNames[i]}</a></h5>
+                                `;
+                                popupContent.appendChild(artistDiv);
+                            }
+
+                            overlay.style.display = "flex"; // Show popup
+                        });
+                    });
+                });
+
+                function closePopup() {
+                    document.getElementById("overlay").style.display = "none";
+                }
+
+            </script>
     </body>
 </html>
