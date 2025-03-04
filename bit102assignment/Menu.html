@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="menustyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <style>@import url('https://fonts.cdnfonts.com/css/eagle-gt-ii');</style>
+        <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
+        <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
+        <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
+    </head>
+    <body>
+        <ul class="nav">
+            <li><a class="menu" a href="Menu.html">
+                <img class='logo' src="images/logo2.png"></a></li>
+            <li><a href="Community.html">community</a></li>
+            <li><a href="#search">
+                <img class='search' src="images/search.png"></a></li>
+                <li class='searchbar'><input type="text" placeholder="Search Artist...">
+            <li style="float:right"><a href="#signup">Sign Up</a>
+          </ul>
+        <h1>video here later</h1>
+        <h2>COMMUNITY FAVORITE ALBUMS</h2>
+        <div>
+            <div class="topAlbum">
+                <img id="image" src="images/1.jpg" height="400px" width="400px" 
+                style="background-color: white;">
+                <div class="overlay">
+                    <div class="left">
+                        <button onclick="left ()" , style="
+                            padding: 0;
+                            background: none;
+                            border: none;">
+                            <img src="images/left.png" width="100">
+                        </button>
+                    </div>
+                    <div class="right">
+                        <button onclick="right ()" , style="
+                        padding: 0;
+                        background: none;
+                        border: none;">
+                            <img src="images/right.png"width="100">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="imgnavbar" style="width: 100;">    
+                    <div class="fotorama" role="button" onclick="imgChange1()">
+                        <img src="images/1.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange2()">
+                        <img src="images/2.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange3()">
+                        <img src="images/3.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange4()">
+                        <img src="images/4.jpg" style="width: 80px;">
+                    </div>
+            </div>
+            <figcaption id="ImgCapt" style="color: white;">Gabriel - Keshi</figcaption>
+
+            <script>
+                let image = ["images/1.jpg","images/2.jpg", "images/3.jpg","images/4.jpg"];
+                let ImgCapt = ["Gabriel - Keshi", "Nectar - Joji", "Summer Flows 0.02", "Blue - Yung Kai"];
+                let index = 0;
+                function right() {
+                    index = (index + 1) % image.length;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function left() {
+                    index = (index - 1 + image.length) % image.length;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];}
+    
+                function imgChange1() {
+                    index = 0;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                
+                function imgChange2() {
+                    index = 1;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function imgChange3() {
+                    index = 2;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function imgChange4() {
+                    index = 3;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+            </script>   
+        </div>
+<nav><a href="topAlbum.html">Top 10 List</a></nav>
+
+<li>Gabriel - <a href="Keshi.html">Keshi</a></li>
+<li>Nectar - <a href="Joji.html">Joji</a></li>
+<li>Summer flows 0.02 - <a href="W2E.html">Wave to Earth</a></li>
+<li>Blue - <a href="YungKai.html">Yung Kai</a></li>
+<li>placeholder - <a href="topAlbum.html">placeholder</a></li>
+
+        <script src="" async defer></script>
+        <!--footer here-->
+        <footer class="footer">
+            <p>&copy; 2025 S-RECCER</p>
+            <img src="images/gif4.webp">
+          </footer>
+          <!--footer end-->
+    </body>
+</html> 
