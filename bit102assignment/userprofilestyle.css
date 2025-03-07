@@ -40,25 +40,42 @@ body {
     position: relative;
     max-width: 1000px;
     width: 100%;
-    height: 450px;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    background-color: #800000;
+    border-radius: 10px;
+    overflow: visible;
+    align-items: center;
+    margin: auto;
+    justify-content: flex-start; 
+    flex-direction: row;
+    top: 5%;
+    /*position: relative;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
     display: flex;
     background-color: #f5f1da;
     border-radius: 10px;
     overflow: visible;
     justify-content: flex-start; 
     flex-direction: row;
-    top: 50%;
+    top: 50%;*/
 }
 
 .ticket-left {
     width: 30%;
+    height: auto;
     background-color: #800000;
-    position: center;
-    display: flex;
     justify-content: center;
+    display: flex;
     align-items: center;
     flex-direction: column;
-    flex: 2;
+    padding: 0px;
+    margin: 0px;
+    flex:1;
 }
 
 .pfname {
@@ -74,6 +91,11 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+.facecard:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .ticket-right {
@@ -103,22 +125,23 @@ h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #800000;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .bottombtns {
-    position: absolute;
+    position: relative;
     display: flex;
+    width: 100%;
     flex-direction: row;
-    gap : 20px;
-    justify-content: center;
-    align-items: center;
     border: none;
     background: none;
     bottom: 10px;
     right: 10px;
+    margin-top: 50px;
 }
 
 .bottombtns button:hover{
+    margin-top: auto;
     background-color: #ffffff;
     color: white;
     border-radius: 10px;
@@ -130,7 +153,6 @@ h2{
 div.bottombtns button{
     border:none;
     background: none;
-
 }
 
 .commsbutton img, .frndbutton img {
@@ -154,12 +176,17 @@ div.bottombtns button{
     gap: 20px;
 }
 
-#commssection, #frndsection {
+#commssection,#frndsection {
     width: 100%;
+    gap: 20px;
     max-width: 1000px;
     margin: 20px auto;
+    justify-content: center;
     transition: height 0.5s ease-in-out;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .card.card-body {
@@ -170,14 +197,106 @@ div.bottombtns button{
     border-radius: 10px;
     padding: 10px;
     height: auto;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    gap: 10px;
 }
 
-.row {
+#row {
     justify-content: center;
     align-items: center;
-    gap: 0px;
+    width: 100%;
+}
+
+.friend-pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.friendlist{
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+    gap: 15px
+}
+
+.friend{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.communities{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.albumpfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.commslist{
+    gap: 15px;
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    
+}
+
+@media (max-width: 768px) {
+    .ticket {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
+    }
+
+    .ticket-left {
+        width: 100%;
+    }
+
+    .ticket-right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .bottombtns {
+        flex-direction: row; 
+        margin-top: 30px; 
+    }
+
+    .card.card-body {
+        width: auto;
+        max-width: min-content;
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .friend-name,.album-name{
+        display: none;  
+    }
+
+    .albumpfp  {
+        width: 50px;
+        height: 50px;
+    }
+
+    .friend-pfp{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+* {
+    border: red 1px solid;
 }
