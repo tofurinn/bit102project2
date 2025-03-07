@@ -16,6 +16,19 @@
     font-family: 'Lexend', sans-serif;
     src: url('https://fonts.cdnfonts.com/css/lexend');
 }
+.header {
+    width: 100%; /* Full width of the viewport */
+    background-color: black; /* Black background */
+    color: cyan; /* Text color */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Add some vertical padding */
+}
+body {
+    position: relative;
+    min-height: 100%;
+}
+
+
 /*navbar start*/
 ul.nav{
     list-style-type: none;
@@ -53,11 +66,13 @@ img.logo{
   height: 20px;
 }
 /*end of navbar*/
-h1{
-    color:black;
-    font-family:'SF Automaton', sans-serif;
-    font-size: 50px;
-    background-color: none;
+h1 {
+    display: block;
+    color: rgb(0, 242, 255);
+    background-color: black;
+    padding: 15px;
+    width: fit-content; /* Only takes up the necessary space */
+    margin: 0 auto; /* Centers it horizontally */
 }
 /* Overlay styles */
 .overlay {
@@ -84,7 +99,7 @@ h1{
 
 .popup img {
     max-width: 200px; /* Adjusted image size */
-    height: auto;
+    height: 200px;
     margin: 10px;
     border-radius: 10px;
 }
@@ -102,4 +117,23 @@ h1{
     right: 15px;
     font-size: 20px;
     cursor: pointer;
+}
+.back2top {
+    position: fixed;  
+    right: 15px;
+    bottom: 15px;
+    width: 100px; 
+}
+
+.back2top img {
+    width: 100px;   
+    height: auto;  
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.bottom-space{
+    height: 50px;
 }

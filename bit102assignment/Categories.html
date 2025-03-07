@@ -24,12 +24,15 @@
                 <li class='searchbar'><input type="text" placeholder="Search Artist...">
             <li style="float:right"><a href="#signup">Sign Up</a>
             </ul>
-            <h1><a href="" id="Top" style="color: black; text-decoration: none;">Community's favourite Categories</a></h1>
+
+            <div class="header">
+                <h1>Community's favourite Categories</h1>
+            </div>
 
             <div class="container mt-4">
-                <div class="row">
+                <div class="row justify-content-center">
                     <!-- First Card -->
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-flex justify-content-center">
                         <div class="card" style="width: 18rem;">
                             <img src="images/Cat/Cat1.jpeg" class="card-img-top" alt="cat1">
                             <div class="card-body">
@@ -46,7 +49,7 @@
                         </div>
                     </div>
                     <!--second card -->
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-flex justify-content-center">
                         <div class="card" style="width: 18rem;">
                             <img src="images/Cat/Cat2.png" class="card-img-top" alt="cat2">
                             <div class="card-body">
@@ -64,7 +67,7 @@
                     </div>
                     
                     <!--third card-->
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-flex justify-content-center">
                         <div class="card" style="width: 18rem;">
                             <img src="images/Cat/Cat3.jpg" class="card-img-top" alt="cat3">
                             <div class="card-body">
@@ -82,7 +85,7 @@
                     </div>
 
                     <!--fourth card-->
-                    <div class="col-md-4 mt-4">
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
                         <div class="card" style="width: 18rem;">
                             <img src="images/Cat/Cat4.png" class="card-img-top" alt="cat4">
                             <div class="card-body">
@@ -98,20 +101,59 @@
                             </div>
                         </div>
                     </div>
-            
+                    <!--fifth card-->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat5.jpg" class="card-img-top" alt="cat5">
+                            <div class="card-body">
+                                <h5 class="card-title">K-Pop</h5>
+                                <p class="card-text">And don't you know how sweet it taste</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="K-Pop"
+                                        data-artists="NewJeans,Kiss of Life,Aespa " 
+                                        data-images="images/Cat/Supernatural.png,images/Cat/KOL.webp,images/Cat/aespa.webp"
+                                        data-links="NewJeans.html,KissofLife.html,Aespa.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sixth card-->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat6.jpg" class="card-img-top" alt="cat6">
+                            <div class="card-body">
+                                <h5 class="card-title">C-Pop</h5>
+                                <p class="card-text">eric chou my goat</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="C-Pop"
+                                        data-artists="Eric Chou,Firdhaus,JJ Lin" 
+                                        data-images="images/Cat/EricChou.jpg,images/Cat/Firdhaus.jpeg,images/Cat/JJLin.jpg"
+                                        data-links="Beabadoobee.html,Firdhaus.html,JJLin.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
+            <div class="bottom-space"></div>
             
             <!-- overlay popup -->
             <div class="overlay" id="overlay">
                 <div class="popup">
                     <span class="close-btn" onclick="closePopup()">X</span>
-                    <h1 id="popup-genre"></h1>
+                    <h2 id="popup-genre"></h2>
                     <div class="artist-container" id="popup-content"></div>
                 </div>
             </div>
-            
+
+            <div class="back2top">
+                <a href="Categories.html">
+                    <img src="images/Back2Top.png" alt="Back to Top">
+                </a>
+            </div>
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const overlay = document.getElementById("overlay");
@@ -140,8 +182,17 @@
                             overlay.style.display = "flex"; // Show popup
                         });
                     });
+                    
+    // Close popup when clicking on overlay (but not on the popup itself)
+                    overlay.addEventListener("click", function (event) {
+                        if (event.target === overlay) {
+                            closePopup();
+                        }
+                    });
                 });
 
+
+// Close function
                 function closePopup() {
                     document.getElementById("overlay").style.display = "none";
                 }
