@@ -1,0 +1,78 @@
+@font-face {
+    font-family:'Eagle GT II', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/eagle-gt-ii')
+}
+@font-face {
+   font-family: 'Trashbox', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/trashbox')
+}
+@font-face {
+    font-family: 'SF Automaton', sans-serif;
+    font-family: 'SF Automaton Condensed', sans-serif;
+    font-family: 'SF Automaton Extended', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/sf-automaton');
+}
+@font-face {
+    font-family: 'Lexend', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/lexend');
+}
+ul.nav{
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    text-align: center;
+    padding: 1%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1.5px solid black;
+}    
+.nav li a {
+    color: rgb(255, 255, 255);
+    font-family: 'SF Automaton', sans-serif;
+    padding: 20px 20px;
+    text-decoration: none;
+    align-items: center;
+}
+nav.searchbar{
+    border-radius: 20%;
+}
+img.search{
+    width: 20px;
+    height: 20px;
+}
+
+img.logo{
+  width:100px;
+  height: 20px;
+}
+/*end of navbar*/
+.userprofile{
+    width: 70vw;
+    max-width: 1200px; 
+    min-height: 600px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+}
+div.col-md-3-col-12{
+    display: inline-flexbox;
+    flex-direction: column;
+    background-color:blue;
+}
+div.col-md-9-col-12{
+    display: inline-flexbox;
+    flex-direction: column;
+    background-color:red;
+}
+/*left col*/
+.profilepic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}

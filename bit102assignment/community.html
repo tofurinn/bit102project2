@@ -13,7 +13,6 @@
         <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
-</style>
     </head>
     <body>
       <!--navbar start-->
@@ -40,7 +39,7 @@
         <!--explore start-->
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-12">
               <a class="btn btn-warning w-100" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">+ create post</a>
                 <div class="joined">
                   <ul>
@@ -72,11 +71,11 @@
                 </ul>
                 </div>
               </div>
-              <div class="col-md-8">
-                <div class="explore">
+              <div class="col-md-8 col-12">
+                <div class="explorenav">
                   <ul class="explorenav">
-                    <li><a class="active" a href="#explore">Explore</a></li>
-                    <li><a class="inbox" a href="#inbox">Inbox</a></li>
+                    <li><a class="active" id="exploreLink" href="#">Explore</a></li>
+                    <li><a class="inbox" id="inboxLink" href="#">Inbox</a></li>
                   </ul>
                 </div>
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -91,7 +90,7 @@
                     </div>
                   </div>
                 </div>
-                  <div class="explore">
+                  <div class="explore" id="maincollapse">
                     <div class="profile-picture">
                       <img src="images/profile1.jpeg" alt="Profile Picture">
                     </div>
@@ -158,14 +157,20 @@
                           </div>
                         <a class="btn btn-warning" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">comment</a>
                         </div>
+                        <div id="inboxContent" style="display: none;">
+                          <h2>Inbox</h2>
+                          <p>This is your inbox area.</p>
+                        </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          <!--footer here-->
           <footer class="footer">
             <p>&copy; 2025 S-RECCER</p>
             <img src="images/gif4.webp">
           </footer>
-
-        
+          <!--footer end-->
+    </body>
+</html>

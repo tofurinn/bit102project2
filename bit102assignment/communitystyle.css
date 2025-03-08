@@ -31,7 +31,7 @@ ul.nav{
     text-align: center;
     padding: 1%;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.5);
     border-bottom: 1.5px solid black;
 }    
 .nav li a {
@@ -44,11 +44,22 @@ ul.nav{
 nav.searchbar{
     border-radius: 20%;
 }
+.searchbar input[type="text"]{
+    background-color: rgb(132, 156, 249);
+    font-family: 'lexend', sans-serif;
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 img.search{
     width: 20px;
     height: 20px;
 }
-
 img.logo{
   width:100px;
   height: 20px;
@@ -59,6 +70,7 @@ video {
     height: 180px;
     object-fit: cover;
     object-position: top;
+    margin-top: 0;
 }
 .header{
     position: relative;
@@ -105,7 +117,7 @@ h2{
     flex-direction: row;
     width: 100vw;
 }
-div.col-md-4{
+div.col-sm-4-col-12{
     position: sticky;
     left:0;
     top: 70px;
@@ -115,7 +127,7 @@ div.col-md-4{
     width: 28%;
     align-self: flex-start;
 }
-div.col-md-8{
+div.col-md-8-col-12{
     background-color: white;
     padding: 10px;
     width: 70%;

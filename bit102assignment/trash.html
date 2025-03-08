@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+      position: sticky;
+      width: 100%;
+      background-color: rgb(0,0,0,0.8);
+      border-bottom: 2px solid black;
+    }
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    .logo{
+        width: 100px;
+        height: 20px;
+    }
+    .pfp{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .searchbar {
+        border-radius: 20%;
+    }
+    .search-input {
+        background-color: rgb(132, 156, 249);
+        font-family: 'lexend', sans-serif;
+        width: 130px;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        padding: 0px;
+        margin-top: 0px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .search {
+        width: 20px;
+        height: 20px;
+    }
+    @media screen and (max-width: 600px) {
+        .searchbar {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="topnav" id="myTopnav">
+        <a class="active" a href="Menu.html">
+            <img class='logo' src="images/logo2.png"></a>
+        <a href="#community">community</a>
+        <a href="#search">
+            <img class='search' src="images/search.png"></a>
+            <a class="searchbar" input type="text" placeholder="Search Artist..."></a>
+        <a href="profilepic"></a>
+            <img class='pfp' src="images/profile1.jpeg"></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <div style="padding-left:16px">
+      <h2>Responsive Topnav Example</h2>
+      <p>Resize the browser window to see how it works.</p>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    
+    </body>
+    </html>
+
+        <nav><a href="topAlbum.html">Top 10 List</a></nav>
+
+        <li>Gabriel - <a href="topAlbum.html">Keshi</a></li>
+        <li>Nectar - <a href="topAlbum.html">Joji</a></li>
+        <li>Summer flows 0.02 - <a href="topAlbum.html">Wave to Earth</a></li>
+        <li>Blue - <a href="topAlbum.html">Yung Kai</a></li>
+        <li>placeholder - <a href="topAlbum.html">placeholder</a></li>
+        
