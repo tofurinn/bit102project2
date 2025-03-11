@@ -34,19 +34,6 @@ img.logo{
   height: 20px;
 }
 
-.artist-header {
-    position: relative;
-    background: url('images/lukepfp.jpeg') no-repeat center/cover;
-    height: 250px;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-}
-
 .artist-header::before {
     content: "";
     position: absolute;
