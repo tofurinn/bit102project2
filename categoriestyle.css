@@ -361,12 +361,12 @@ h1 {
 }
 
 .GenreAdd img {
+    scale: 0.8;
     transition: transform 0.5s ease-in-out; /* Smooth scaling transition */
 }
 
 .GenreAdd img:hover {
-    transform: scale(1.2); /* Increases size by 20% when hovered */
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.2);
 }
 
 @media (max-width: 799px) {
