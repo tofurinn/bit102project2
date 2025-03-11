@@ -197,6 +197,29 @@
                 document.getElementById("commentInput").value = "";
             }
         }
+        
+        function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                    var x = document.getElementById("mySearchBar");
+                    if (x.className === "searchbar") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "searchbar";
+                    }
+                }
+                    function toggleSearchbar() {
+                    var searchbar = document.querySelector('mySearchBar');
+                    if (searchbar.style.display === 'none') {
+                        searchbar.style.display = 'block';
+                    } else {
+                        searchbar.style.display = 'none';
+                        }
+                }
     </script>
 
 
