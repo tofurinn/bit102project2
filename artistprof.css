@@ -1,0 +1,355 @@
+@font-face {
+    font-family:'Eagle GT II', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/eagle-gt-ii')
+}
+@font-face {
+   font-family: 'Trashbox', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/trashbox')
+}
+@font-face {
+    font-family: 'SF Automaton', sans-serif;
+    font-family: 'SF Automaton Condensed', sans-serif;
+    font-family: 'SF Automaton Extended', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/sf-automaton');
+}
+@font-face {
+    font-family: 'Lexend', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/lexend');
+}
+
+/*new navbar start*/
+.topnav {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.80);
+  border-bottom: 2px solid rgb(0,0,0);
+  text-align: center;
+  vertical-align: middle;
+  z-index:1000;
+  margin: 0;
+  top:0;
+}
+.topnav a {
+  font-family: 'sf automaton', sans-serif;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: #f2f2f2;
+  padding: 12px 16px;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom:0px;
+  margin-left: 5px;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 20px;
+  transition: 0.2s  ease-in-out;
+  overflow: hidden;
+}
+
+.topnav a:hover {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  transform: scale(1.1) translateZ(0);
+}
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.topnav a.icon {
+  display:none;
+}
+.logo{
+    width: 120px;
+    height: fit-content;
+}  
+
+.searchbar {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      margin-bottom: 5px;
+}
+
+.searchbar input[type="text"] {
+      font-family: 'sf automaton', sans-serif;
+      letter-spacing: 1px;
+      font-size: 10px;
+      background-color: rgb(255, 255, 94);
+      padding: 6px;
+      margin-right: 0px;
+      margin-bottom: 7px;
+      border: none;
+      height: 30px;
+      border-radius: 10px;
+      width: 150px;
+}
+
+.searchbar button[type="submit"] {
+  background-color: rgb(0, 0, 0, 0);
+  color: #fff;
+  padding: 5px 10px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.searchbar button[type="submit"]:hover {
+  background-color: rgb(255, 116, 167);
+}
+.profile img{
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  transition: 0.2s  ease-in-out;
+}
+.profile img:hover {
+  transform: scale(1.1) translateZ(1);
+}
+@media screen and (max-width: 750px) {
+  .topnav a, .topnav .searchbar, .topnav .profile {
+      margin-left: 0px;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon{
+      float: none;
+      right: 0;
+      top: 0;
+      position: fixed;
+      margin-top: 2px;
+      display: block;
+  }
+  .topnav .profile img{
+      float: left;
+      display: block;
+  }
+  .topnav.responsive {
+      position: sticky;
+  }
+  .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+  }
+  .searchbar {
+      display:none;
+  }
+  #myTopnav.responsive {
+      position:fixed;
+      z-index:1000;
+  }
+  #myTopnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  #myTopnav.responsive a{
+      float: none;
+      display: block;
+      text-align: left;
+      margin-left: 5%;
+  }
+  #myTopnav.responsive .searchbar {
+      float: none;
+      display: block;
+      text-align: left;
+      margin-left: 7%;
+  }
+  #myTopnav.responsive img{
+      float: none;
+      display: block;
+      text-align: left;
+      margin-left: 0.5%;
+  }
+  #myLinks {
+    display: block;
+  }
+}
+/*new navbar end*/
+
+.artist-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.artist-header h1 {
+    position: relative;
+    z-index: 2;
+    opacity: 0; 
+    animation: fadeInText 3s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width:800px;
+    margin-top: 30px;
+}
+
+.album-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;  
+    margin-top: 20px;
+}
+
+.album {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.album img {
+    width: 200px;  
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.album p {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.album:hover {
+    transform: scale(1.1);
+}
+
+.album:hover img {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+    .album-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .album img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.song-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.song-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.song-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.song-info {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-info p {
+    margin: 0;
+    font-weight: bold;
+    text-align: left; 
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2px;
+}
+
+.song-card:hover {
+    transform: scale(1.05);
+}
+
+.like-btn {
+    min-width: 10px;  
+    padding: 5px 10px; 
+    font-size: 15px;  
+    height: 40px; 
+}
+@media (max-width: 768px) {
+    .album-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .song-card {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .song-card img {
+        margin: 0 auto 10px auto;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.comment-box {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.comment-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.comment-text {
+    background: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}

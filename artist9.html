@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beabadoobee - Artist Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>@import url('https://fonts.cdnfonts.com/css/eagle-gt-ii');</style>
+    <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
+    <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
+    <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
+    <link rel="stylesheet" href="artistprof.css"> 
+    <style>
+.artist-header {
+    position: relative;
+    background: url('images/beapfp.jpeg') no-repeat center/cover;
+    height: 250px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+    </style>
+</head>
+<body>
+    <!--navbar start-->
+    <div class="topnav" id="myTopnav">
+        <a class="menu" href="Menu.html">
+        <img class='logo' src="images/logo2.png"></a>
+        <a class="community" href="community.html">community</a>
+        <a class="category" href="Categories.html">category</a>
+        <div class="searchbar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <a class="profile" href="#profile">
+        <img class='profile' src="images/profile1.jpeg" alt="profile"></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+<!--navbar end-->
+
+
+    <div class="artist-header">
+        <h1>beabadoobee</h1>
+    </div>
+
+    <div class="container text-center">
+
+        <button class="btn btn-primary m-2">Follow</button>
+
+        <button class="btn btn-outline-danger m-2">
+            ❤️ Like <span id="likeCount">0</span>
+        </button>
+
+        <div class="container text-center mt-4">
+            <h2> << beabadoobee Top Album >> </h2>
+        
+            <div class="album-section">
+                <div class="album">
+                    <img src="images/album/bee_deathbed.jpeg" alt="death bed (coffee for your head) Album">
+                    <p>death bed (coffee for your head) (2020) </p>
+                </div>
+        
+                <div class="album">
+                    <img src="images/cat/Bea.jpeg" alt="Beatopia Album">
+                    <p>Beatopia (2022)</p>
+                </div>
+        
+                <div class="album">
+                    <img src="images/album/bee_gluesong.jpeg" alt="Glue Song Album">
+                    <p>Glue Song (2023)</p>
+                </div>
+            </div>
+        </div>
+
+    <h2 class="mt-5">🎶 Fan's Top Pick Songs 🎶</h2>
+    <div class="song-section">
+        <div class="song-card">
+            <img src="images/album/bee_deathbed.jpeg" alt="death bed (coffee for your head) Album">
+            <div class="song-info">
+                <p>
+                    <strong>death bed (coffee for your head)</strong> - beabadoobee
+                    <button class="btn btn-outline-danger like-btn">
+                        ❤️ Like <span id="likeCount1">0</span>
+                    </button>
+                </p>
+                <audio controls>
+                    <source src="musics/bea_gluesong.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <img src="images/cat/Bea.jpeg" alt="Beatopia Album">
+            <div class="song-info">
+                <p>
+                    <strong>the perfect pair</strong> - beabadoobee
+                    <button class="btn btn-outline-danger like-btn">
+                        ❤️ Like <span id="likeCount1">0</span>
+                    </button>
+                </p>
+                <audio controls>
+                    <source src="musics/bea_theperfectpair.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <img src="images/album/bee_gluesong.jpeg" alt="Glue Song Album">
+            <div class="song-info">
+                <p>
+                    <strong>Glue Song</strong> - beabadoobee
+                    <button class="btn btn-outline-danger like-btn">
+                        ❤️ Like <span id="likeCount1">0</span>
+                    </button>
+                </p>
+                <audio controls>
+                    <source src="musics/bea_gluesong.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+        <div class="mt-4 text-start">
+            <h5>Fan Comments</h5>
+            <textarea class="form-control" id="commentInput" placeholder="Write a comment..."></textarea>
+            <button class="btn btn-success mt-2">
+        </div>
+
+        <div class="mt-3" id="commentSection">
+
+            <div class="comment-box">
+                <img src="https://i.pravatar.cc/40?img=1" alt="User">
+                <div class="comment-text">
+                    <strong>@musiclover</strong>
+                    <p>I love you!!!</p>
+                </div>
+            </div>
+            <div class="comment-box">
+                <img src="https://i.pravatar.cc/40?img=2" alt="User">
+                <div class="comment-text">
+                    <strong>@typagurl</strong>
+                    <p>Love those album🔥</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let likeCount = 0;
+
+        function likeArtist() {
+            likeCount++;
+            document.getElementById("likeCount").innerText = likeCount;
+        }
+
+        function addComment() {
+            let commentInput = document.getElementById("commentInput").value;
+            if (commentInput.trim() !== "") {
+                let commentSection = document.getElementById("commentSection");
+
+
+                let commentDiv = document.createElement("div");
+                commentDiv.classList.add("comment-box");
+
+
+                let avatar = document.createElement("img");
+                let randomNum = Math.floor(Math.random() * 70) + 1;
+                avatar.src = `https://i.pravatar.cc/40?img=${randomNum}`;
+                avatar.alt = "User";
+
+
+                let textDiv = document.createElement("div");
+                textDiv.classList.add("comment-text");
+
+
+                let randomNames = ["@fan123", "@musiclover", "@danielFan", "@soulful_vibes"];
+                let username = randomNames[Math.floor(Math.random() * randomNames.length)];
+
+
+                textDiv.innerHTML = `<strong>${username}</strong><p>${commentInput}</p>`;
+
+                commentDiv.appendChild(avatar);
+                commentDiv.appendChild(textDiv);
+                commentSection.appendChild(commentDiv);
+
+
+                document.getElementById("commentInput").value = "";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
