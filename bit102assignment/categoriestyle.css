@@ -112,12 +112,17 @@ h1 {
 }
 
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
 }
+
 .back2top {
     position: fixed;  
     right: 15px;
@@ -126,10 +131,16 @@ h1 {
 }
 
 .back2top img {
-    width: 100px;   
+    width: 100px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
     height: auto;  
     cursor: pointer;
 }
+
+.back2top img:hover {
+    transform: scale(1.2); /* Increases size by 20% when hovered */
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -177,20 +188,31 @@ h1 {
     flex-direction: column;
 }
 .close {
-    align-self: flex-end;
-    cursor: pointer;
+    align-self: center;
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
 }
+
 .input-field {
     width: calc(100% - 10px);
     padding: 5px;
     margin-bottom: 10px;
 }
+
 .artist-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
 }
+
 .artist-box {
     flex: 1;
     min-width: 30%;
@@ -198,13 +220,34 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .submit-btn {
     background-color: blue;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
+    max-width: 300px; /* Optional: Limit max width */
+    transition: 0.5s ease-in-out;
+    display: block;
+    margin: 20px auto; /* This centers the button horizontally */
+    text-align: center;
+}
+
+
+.submit-btn:hover{
+    background-color: blue;
+    scale: 1.1;
+}
+
+.GenreAdd img {
+    transition: transform 0.5s ease-in-out; /* Smooth scaling transition */
+}
+
+.GenreAdd img:hover {
+    transform: scale(1.2); /* Increases size by 20% when hovered */
+    transform: rotate(360deg);
 }
 
 @media (max-width: 799px) {
@@ -268,6 +311,7 @@ h1 {
     .artist-box {
         width: 100%; /* Make artist input sections full width */
     }
+    
 }
 .bottom-space{
     height: 50px;
