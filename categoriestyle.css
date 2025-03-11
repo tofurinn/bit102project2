@@ -184,15 +184,29 @@ body {
       display: block;
     }
   }
-  /*new navbar end*/  
-  
-h1 {
-    display: block;
-    color: rgb(0, 242, 255);
-    background-color: black;
-    padding: 15px;
-    width: fit-content; /* Only takes up the necessary space */
-    margin: 0 auto; /* Centers it horizontally */
+/*new navbar end*/  
+
+video {
+    width: 100vw;
+    height: 180px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin-top: 0;
+}
+.header{
+    position: relative;
+}  
+
+div.textoverlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    letter-spacing: 2px;
+    font-size: 36px;
+    text-align: center;
+    z-index: 1;
 }
 /* Overlay styles */
 .overlay {
