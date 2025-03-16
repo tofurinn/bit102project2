@@ -262,6 +262,7 @@ div.textoverlay{
     right: 15px;
     bottom: 15px;
     width: 100px; 
+    z-index: 1001;
 }
 
 .back2top img {
@@ -446,8 +447,17 @@ div.textoverlay{
     }
     
 }
-.bottom-space{
-    height: 50px;
+footer{
+    background-color: black;
+    color:white;
+    font-family: 'SF Automaton', sans-serif;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
 }
 /* small screen css*/
 @media (max-width: 600px) {

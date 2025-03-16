@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Community</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="communitystyle.css">
@@ -15,26 +15,21 @@
         <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
-        
     </head>
     <body>
       <!--navbar start-->
-      <div class="topnav" id="myTopnav">
+        <div class="topnav" id="myTopnav">
           <a class="menu" href="Menu.html">
-          <img class='logo' src="images/logo2.png"></a>
+            <img class='logo' src="images/logo2.png"></a>
           <a class="community" href="community.html">community</a>
           <a class="category" href="Categories.html">category</a>
-          <div class="searchbar">
-              <input type="text" placeholder="Search...">
-              <button type="submit"><i class="fa fa-search"></i></button>
-          </div>
-          <a class="profile" href="#profile">
-          <img class='profile' src="images/profile1.jpeg" alt="profile"></a>
+          <a class="profile" href="profile.html">
+            <img class='profile' src="images/profile5.jpeg" alt="profile"></a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
           </a>
       </div>
-  <!--navbar end-->
+      <!--navbar end-->
       <div class="header">
         <video autoplay muted loop playsinline>
           <source src="exploreheader.mov" type="video/mp4">
@@ -48,35 +43,38 @@
         <!--explore start-->
         <div class="container">
           <div class="row">
-            <div class="col-md-4 col-12">
+            <div class="col-md-4 col-12 position-sticky">
               <a class="btn btn-warning w-100" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">+ create post</a>
                 <div class="joined">
                   <ul>
-                    <li class="title">Joined Communities</li>
-                    <li>
-                        <a href="artist9.html" class="community-item">
-                            <img class='artistpic' src="images/artist1.jpg" alt="Beabadoobee">
-                            <span>Beabadoobee</span>
+                    <a href="javascript:void(0);" class="text" onclick="myJoinedList()">
+                      <li class="title">Joined Communities</li>
+                        <div id = "myJoinedList" >
+                      <li>
+                          <a href="artist9.html" class="community-item">
+                              <img class='artistpic' src="images/artist1.jpg" alt="Beabadoobee">
+                              <span>Beabadoobee</span>
+                          </a>
+                      </li>
+                      <li>
+                        <a href="artist2.html" class="community-item">
+                            <img class='artistpic' src="images/artist3.jpg" alt="Wave To Earth">
+                            <span>Wave to Earth</span>
                         </a>
-                    </li>
-                    <li>
-                      <a href="artist2.html" class="community-item">
-                          <img class='artistpic' src="images/artist3.jpg" alt="Wave To Earth">
-                          <span>Wave to Earth</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="artist4.html" class="community-item">
-                          <img class='artistpic' src="images/artist2.jpg" alt="Joji">
-                          <span>Joji</span>
-                      </a>
-                    </li>
-                <li>
-                  <a href="artist18.html" class="community-item">
-                      <img class='artistpic' src="images/artist4.jpg" alt="Frank Ocean">
-                      <span>Frank Ocean</span>
-                  </a>
-                </li>
+                      </li>
+                      <li>
+                        <a href="artist4.html" class="community-item">
+                            <img class='artistpic' src="images/artist2.jpg" alt="Joji">
+                            <span>Joji</span>
+                        </a>
+                      </li>
+                  <li>
+                    <a href="artist18.html" class="community-item">
+                        <img class='artistpic' src="images/artist4.jpg" alt="Frank Ocean">
+                        <span>Frank Ocean</span>
+                    </a>
+                  </li>
+                  </div>
                 </ul>
                 </div>
               </div>
@@ -84,7 +82,6 @@
                 <div class="explorenav">
                   <ul class="explorenav">
                     <li><a class="active" id="exploreLink" href="#">Explore</a></li>
-                    <li><a class="inbox" id="inboxLink" href="#">Inbox</a></li>
                   </ul>
                 </div>
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -93,7 +90,7 @@
                       <img src="images/profile5.jpeg" alt="Profile Picture">
                     </div>
                     <div class="post-content">
-                      <h4 class="username"><a href="#profile5">@bellybuttonsniffer (me)</a></h4>
+                      <h4 class="username"><a href="#profile5">@jazzLover (me)</a></h4>
                       <input type="text" class="post" placeholder="Title of Post...">
                       <button type="button" class="btn btn-outline-warning">post</button>
                     </div>
@@ -175,38 +172,40 @@
                 </div>
               </div>
             </div>
-            <Script>
-
-              function myFunction() {
-                  var x = document.getElementById("myTopnav");
-                  if (x.className === "topnav") {
-                      x.className += " responsive";
-                  } else {
-                      x.className = "topnav";
-                  }
-                  var x = document.getElementById("mySearchBar");
-                  if (x.className === "searchbar") {
-                      x.className += " responsive";
-                  } else {
-                      x.className = "searchbar";
-                  }
-              }
-                  function toggleSearchbar() {
-                  var searchbar = document.querySelector('mySearchBar');
-                  if (searchbar.style.display === 'none') {
-                      searchbar.style.display = 'block';
-                  } else {
-                      searchbar.style.display = 'none';
-                      }
-              }
-
-
-            </Script>
           <!--footer here-->
           <footer class="footer">
             <p>&copy; 2025 S-RECCER</p>
             <img src="images/gif4.webp">
           </footer>
           <!--footer end-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+              }
+          
+              function myJoinedList() {
+                var x = document.getElementById("myJoinedList");
+                if (window.matchMedia("(max-width: 767px)").matches) {
+                  x.classList.toggle("hidden");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "none";
+                    }
+                } else {
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            }
+          </script>
+          <script src="" async defer></script>
     </body>
 </html>
