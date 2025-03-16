@@ -187,11 +187,11 @@ h1{
 .div1{
     background-image: url('images/menu1.gif');
     background-size: cover;
-    background-position: center; 
+    background-position: top center; 
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px; 
     position: relative;
-    height:300px;  
+    height:80%;  
     background-attachment: fixed;
     display: flex;
     justify-content: center;
