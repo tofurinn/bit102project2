@@ -321,7 +321,7 @@ div.fotorama:hover {
 }
 /*div2 here*/
 .div2 {
-    width:100vw;
+    width:100%;
     height: 200px;
     background-color: rgb(255, 0, 115);;
     animation-name: div2;
