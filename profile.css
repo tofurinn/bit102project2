@@ -24,7 +24,7 @@ body {
     background-position: center;
     height: 100vh;
     margin: 0;
-    padding:0;
+    padding-bottom: 1000px;
 }
 /*new navbar start*/
 .topnav {
@@ -238,7 +238,6 @@ body {
 .ticket-left {
     width: 30%;
     height: auto;
-    background-color: hsl(0, 0%, 0%);
     justify-content: center;
     display: flex;
     align-items: center;
@@ -249,12 +248,12 @@ body {
     margin: 0px;
     border-right: 3px rgb(245, 241, 218);
     border-right-style: dashed;
-
+    z-index: -1;
 }
 
 /*left container content*/
 .pfname {
-    font-size: 1rem;
+    font-size: 20px;
     font-family: 'lexend', sans-serif;
     color: white;
     padding: 0;
@@ -349,7 +348,7 @@ div.bottombtns button{
 }
 
 .ticket-right p {
-    font-size: 1.3 rem;
+    font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(21, 21, 21);
     margin-top: 10px;
@@ -414,7 +413,7 @@ div.bottombtns button{
 /*user container end*/
 
 /*collapsable start*/
-#commssection,#frndsection {
+#frndsection {
     width: 100%;
     max-width: 100%;
     margin: 20px auto;
@@ -424,6 +423,23 @@ div.bottombtns button{
     margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#commssection {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+    transition: height 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 180px;
 }
 
 .card.card-body {
@@ -432,7 +448,7 @@ div.bottombtns button{
     min-height: 100px;
     border: none;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px;
     height: auto;
     flex-direction: column;
     justify-content: center;
@@ -449,15 +465,22 @@ h3{
 }
 
 .collapsablepfp {
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
+    display: flex;
 }
 
 .collapsablename{
-    font-size: 14px;
+    font-size: 17px;
     font-family: 'lexend', sans-serif;
     color: #666;
+    display: block;
+    width: 100px; 
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .facecard{
     margin-left: 10%;
@@ -470,7 +493,7 @@ h3{
     flex-direction: row;
     display: flex;
     margin: auto;
-    gap: 15px
+    gap: 40px;
 }
 
 .collapsablecontent{
@@ -499,21 +522,48 @@ h3{
         height: 3rem;
         border-radius: 50%;
     }
+    .settings-btn img{
+        filter: invert(100%);
+    }
 }
 @media (max-width: 450px){
     .collapsablename{
         display: none;
     }
 }
+
+.settings-btn img{
+    height: 70px;
+    width: 70px;
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    padding: 0; 
+    position: fixed; 
+    bottom: 100px; 
+    right: 20px;
+    z-index: 100; 
+}
+
+.settings-btn img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    filter: invert(100%);
+}
+
 footer{
     background-color: black;
     color:white;
     font-family: 'SF Automaton', sans-serif;
     padding: 15px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
     text-align: center;
+    margin-top: 50px;
+}
+
+.fixfootercontainer{
+    flex:1;
 }
