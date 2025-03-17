@@ -17,24 +17,15 @@
         <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
     </head>
     <body>
-        
         <!--navbar start-->
         <div class="topnav" id="myTopnav">
             <a class="menu" href="Menu.html">
-              <img class='logo' src="images/logo2.png"></a>
-            <a class="community" href="#community">community</a>
-            <a class="category" href="#category">category</a>
-            <div class="searchbar" id="mySearchBar">
-                <input type="text" placeholder="Search...">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </div>
-            <a class="profile" href="#profile">
-              <img class='profile' src="images/profile1.jpeg" alt="profile"></a>
+                <img class='logo' src="images/logo2.png"></a>
+            <a class="sign up" href="signin.html">SIGN UP</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
-        </div>
-        <!--navbar end-->
+        </div>    <!--navbar end-->
         <div class="div1" style="background-image:url('images/menu1.gif');">
             <img src="images/logo2.png" alt="logo">
             <p>Welcome to S-RECCER!<br>Share your love through music</p>
@@ -64,90 +55,92 @@
                     </div>
                 </div>
             </div>
-            <div class="imgnavbar" style="width: 100;">    
-                <div class="fotorama" role="button" onclick="imgChange1()">
-                    <img src="images/1.jpg" style="width: 80px;">
-                </div>
-                <div class="fotorama" role="button" onclick="imgChange2()">
-                    <img src="images/2.jpg" style="width: 80px;">
-                </div>
-                <div class="fotorama" role="button" onclick="imgChange3()">
-                    <img src="images/3.jpg" style="width: 80px;">
-                </div>
-                <div class="fotorama" role="button" onclick="imgChange4()">
-                    <img src="images/4.jpg" style="width: 80px;">
-                </div>
-            </div>
-                <figcaption id="ImgCapt" style="color: white;">Gabriel - Keshi</figcaption>   
-            </div>
-            <div class="div2">
-                <h1>ABOUT US</h1>
-            </div>
-            <!--footer here-->
-            <footer class="footer">
-                <p>&copy; 2025 S-RECCER</p>
-                <img src="images/gif4.webp">
-            </footer>
-            <!--footer end-->
 
-        <script src="" async defer></script>
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-                var x = document.getElementById("mySearchBar");
-                if (x.className === "searchbar") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "searchbar";
-                }
-                }
-                function toggleSearchbar() {
-                var searchbar = document.querySelector('mySearchBar');
-                if (searchbar.style.display === 'none') {
-                    searchbar.style.display = 'block';
-                } else {
-                    searchbar.style.display = 'none';
+            <div class="imgnavbar" style="width: 100;">    
+                    <div class="fotorama" role="button" onclick="imgChange1()">
+                        <img src="images/1.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange2()">
+                        <img src="images/2.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange3()">
+                        <img src="images/3.jpg" style="width: 80px;">
+                    </div>
+                    <div class="fotorama" role="button" onclick="imgChange4()">
+                        <img src="images/4.jpg" style="width: 80px;">
+                    </div>
+            </div>
+            <figcaption id="ImgCapt" style="color: white;">Gabriel - Keshi</figcaption>
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                    var x = document.getElementById("mySearchBar");
+                    if (x.className === "searchbar") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "searchbar";
                     }
                 }
-            let image = ["images/1.jpg","images/2.jpg", "images/3.jpg","images/4.jpg"];
-            let ImgCapt = ["Gabriel - Keshi", "Nectar - Joji", "Summer Flows 0.02", "Blue - Yung Kai"];
-            let index = 0;
-            function right() {
-                index = (index + 1) % image.length;
-                document.getElementById("image").src = image[index];
-                document.getElementById("ImgCapt").textContent = ImgCapt[index];
-            }
-            function left() {
-                index = (index - 1 + image.length) % image.length;
-                document.getElementById("image").src = image[index];
-                document.getElementById("ImgCapt").textContent = ImgCapt[index];}
-
-            function imgChange1() {
-                index = 0;
-                document.getElementById("image").src = image[index];
-                document.getElementById("ImgCapt").textContent = ImgCapt[index];
-            }
-            
-            function imgChange2() {
-                index = 1;
-                document.getElementById("image").src = image[index];
-                document.getElementById("ImgCapt").textContent = ImgCapt[index];
-            }
-            function imgChange3() {
-                index = 2;
-                document.getElementById("image").src = image[index];
-                document.getElementById("ImgCapt").textContent = ImgCapt[index];
-            }
-            function imgChange4() {
-                index = 3;
-                document.getElementById("image").src = image[index];
-                document.getElementById("ImgCapt").textContent = ImgCapt[index];
-            }
-        </script>
+                    function toggleSearchbar() {
+                    var searchbar = document.querySelector('mySearchBar');
+                    if (searchbar.style.display === 'none') {
+                        searchbar.style.display = 'block';
+                    } else {
+                        searchbar.style.display = 'none';
+                        }
+                }
+                let image = ["images/1.jpg","images/2.jpg", "images/3.jpg","images/4.jpg"];
+                let ImgCapt = ["Gabriel - Keshi", "Nectar - Joji", "Summer Flows 0.02", "Blue - Yung Kai"];
+                let index = 0;
+                function right() {
+                    index = (index + 1) % image.length;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function left() {
+                    index = (index - 1 + image.length) % image.length;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];}
+    
+                function imgChange1() {
+                    index = 0;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                
+                function imgChange2() {
+                    index = 1;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function imgChange3() {
+                    index = 2;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+                function imgChange4() {
+                    index = 3;
+                    document.getElementById("image").src = image[index];
+                    document.getElementById("ImgCapt").textContent = ImgCapt[index];
+                }
+            </script>
+        </div>
+        <div class="div2">
+            <h1>ABOUT US</h1>
+            <p>Our website is a platform for music lovers to share their favorite albums and songs. We aim to create a community where people can share their love for music and discover new artists. Join us and be part of the S-RECCER community!</p>
+        </div>
+        <script src="" async defer></script>
+        <!--footer here-->
+        <footer class="footer">
+            <p>&copy; 2025 S-RECCER</p>
+            <img src="images/gif4.webp">
+          </footer>
+        <!--footer end-->
     </body>
 </html> 
