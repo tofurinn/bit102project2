@@ -1,0 +1,462 @@
+@font-face {
+    font-family:'Eagle GT II', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/eagle-gt-ii')
+}
+@font-face {
+   font-family: 'Trashbox', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/trashbox')
+}
+@font-face {
+    font-family: 'SF Automaton', sans-serif;
+    font-family: 'SF Automaton Condensed', sans-serif;
+    font-family: 'SF Automaton Extended', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/sf-automaton');
+}
+@font-face {
+    font-family: 'Lexend', sans-serif;
+    src: url('https://fonts.cdnfonts.com/css/lexend');
+}
+
+/*new navbar start*/
+.topnav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-bottom: 2px solid rgb(0,0,0);
+    text-align: center;
+    vertical-align: middle;
+    z-index:1001;
+    margin: 0;
+    top:0;
+  }
+  .topnav a {
+    font-family: 'sf automaton', sans-serif;
+    letter-spacing: 1px;
+    display: inline-block;
+    color: #f2f2f2;
+    padding: 12px 16px;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom:0px;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 20px;
+    transition: 0.2s  ease-in-out;
+    overflow: hidden;
+  }
+  
+  .topnav a:hover {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1) translateZ(0);
+  }
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .topnav a.icon {
+    display:none;
+  }
+  .logo{
+      width: 120px;
+      height: fit-content;
+  }  
+
+  .profile img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    transition: 0.2s  ease-in-out;
+  }
+  .profile img:hover {
+    transform: scale(1.1) translateZ(1);
+  }
+  @media screen and (max-width: 750px) {
+    .topnav a, .topnav .profile {
+        margin-left: 0px;
+    }
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+    .topnav a.icon{
+        float: none;
+        right: 0;
+        top: 0;
+        position: fixed;
+        margin-top: 2px;
+        display: block;
+    }
+    .topnav .profile img{
+        float: left;
+        display: block;
+    }
+    .topnav.responsive {
+        position: sticky;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .searchbar {
+        display:none;
+    }
+    #myTopnav.responsive {
+        position:fixed;
+        z-index:1001;
+    }
+    #myTopnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #myTopnav.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+        margin-left: 5%;
+    }
+    #myTopnav.responsive .searchbar {
+        float: none;
+        display: block;
+        text-align: left;
+        margin-left: 7%;
+    }
+    #myTopnav.responsive img{
+        float: none;
+        display: block;
+        text-align: left;
+        margin-left: 0.5%;
+    }
+    #myLinks {
+      display: block;
+    }
+  }
+  /*new navbar end*/
+video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 0;
+}
+.header{
+    position: relative;
+}
+div.textoverlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    letter-spacing: 2px;
+    font-size: 36px;
+    text-align: center;
+    z-index: 1;
+}
+body{
+    margin: 0;
+    color:black;
+    background-color: hsl(222, 43%, 86%);
+}
+h1{
+    color:white;
+    font-family:'sf automaton', sans-serif;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content:middle;
+    margin-bottom: 10px;
+    margin-left:10px;
+    margin-right: 10px;
+}
+h2{
+    color:black;
+    font-family: 's';
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+    margin-left:10px;
+}
+.container{
+    display: inline-block;
+    flex-direction: row;
+    width: 100vw;
+}
+/* right container overall style*/
+div.col-md-4.col-12.position-sticky{
+    position: sticky;
+    left:0;
+    top: 70px;
+    background-color: white;
+    padding: 10px;
+    margin-right:10px;
+    width: 28%;
+    align-self: flex-start;
+    z-index: 1000;
+}
+@media(max-width: 750px) {
+    div.col-md-4.col-12.position-sticky {
+        top:10%;
+        width:100vw;
+        background-color: white;
+        overflow-y: auto;
+    }
+
+}
+/* end of right container*/
+
+/*left container overall style*/
+div.col-md-8.col-12{
+    background-color: #ffffff;
+    width: 70%
+    
+}
+@media (max-width: 750px) {
+    div.col-md-8.col-12 {
+        width: 100%;
+    }
+}
+/*left container overally style end*/
+
+/*right container items*/
+.btn.btn-warning.w-100{
+    font-family: 'SF automaton', sans-serif;
+    background-color: hsl(0, 100%, 50%);
+    border: 2px solid #e81d1d;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn.btn-warning.w-100:hover {
+    background-color: rgb(25, 0, 255);
+    border: 2px solid hsl(243, 100%, 67%);
+}
+.joined{
+    position:sticky;
+    
+}
+.joined a{
+    text-decoration: none;
+}
+.joined li.title {
+    margin-bottom: 0; 
+    font-family: 'SF Automaton Condensed', sans-serif;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.joined ul {
+    display: flex;
+    font-family: 'Lexend', sans-serif;
+    flex-direction: column;
+    align-items: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#myJoinedList {
+    display: block;
+}
+  @media (max-width: 767px) {
+    .hidden {
+        display: none;
+    }
+    #myJoinedList{
+        display:block;
+    }
+}
+.joined li a{
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.artistpic {
+    width: 30spx; 
+    height: 30px; 
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 0;
+    vertical-align: left;
+}
+.community-item {
+    color:black;
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    align-items: start ;
+}
+/*end of right container items*/
+
+/*explore forum area*/
+.explorenav{
+    background-color:rgb(0, 68, 255);
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgba(0, 27, 232, 0.302);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 27, 232, 0.302);
+    margin-top:10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+ul.explorenav {
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    text-align: center;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+}
+.explorenav li a {
+    color: rgb(255, 255, 255);
+    font-family: 'SF Automaton', sans-serif;
+    padding: 20px 20px;
+    text-decoration: none;
+    align-items: center;
+}
+.explore {
+    background-color:rgb(240, 244, 255);
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgba(0, 27, 232, 0.302);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 27, 232, 0.302);
+    margin-bottom: 20px;
+    position: relative;
+}
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.profile-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+.post-content{
+    flex: 1;
+    position: relative;
+    padding-bottom: 40px;
+}
+.username{
+    padding-bottom: 2%;
+    border-bottom: 1.5px solid black;
+}
+.username a{
+    color: black;
+    font-family: 'lexend', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+.post-title{
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.post-text{
+    font-size: 15px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+div.post-content input.post {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 27, 232, 0.302);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.post-content input.comment {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 27, 232, 0.302);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.post-content button.btn-outline-warning {
+    font-family: 'SF automaton', sans-serif;
+    background-color: hsl(334, 100%, 81%);
+    border: 2px solid #ff8fb6;
+    font-size: 13px;
+    letter-spacing: 2px;
+    width: 115px;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+div.post-content button.btn-outline-warning:hover {
+    background-color: rgb(44, 254, 244);
+    border: 2px solid hsl(173, 100%, 66%);
+}
+div.comment a.btn-warning {
+    font-family: 'SF automaton', sans-serif;
+    background-color: rgb(0, 232, 74);
+    border: 2px solid hsl(122, 100%, 89%);
+    font-size: 13px;
+    letter-spacing: 2px;
+    width: 115px;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+  
+div.comment a.btn-warning:hover {
+    background-color: rgb(0, 232, 74);
+    border: 2px solid hsl(122, 100%, 89%);
+}
+.post-content button.btn-outline-warning, .comment a.btn-warning {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-top: 20px;
+}
+footer{
+    background-color: black;
+    color:white;
+    font-family: 'SF Automaton', sans-serif;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+/*end of explore forum area*/

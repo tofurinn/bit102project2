@@ -6,33 +6,314 @@
         <title>Categories</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="categoriestyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <style>@import url('https://fonts.cdnfonts.com/css/eagle-gt-ii');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
-        <link rel="stylesheet" href="menustyle.css">
-        <h1><a href="" id="Top" style="color: white; text-decoration: none;">Community's favourite Categories</a></h1>
+        <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
+
+
     </head>
     <body>
-        
-    <div class="container mt-4">
-        <div class="card" style="width: 18rem;">
-            <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Image cap">
-            <div class="card-body">
-                <h5 class="card-title">Rhythms n Blues</h5>
-                <p class="card-text">Soul </p>
-                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#moreContent">
-                    Show Artist
-                </button>
-                <div class="collapse mt-3" id="moreContent">
-                    <p>Daniel Ceasar</p>
-                    <img src="images/daniel_ceasar.jpeg" class="img-fluid" alt="Extra Image">
-                    <img src="https://via.placeholder.com/100x100" class="img-fluid" alt="Extra Image">
+        <!--navbar start-->
+        <div class="topnav" id="myTopnav">
+            <a class="menu" href="Menu.html">
+            <img class='logo' src="images/logo2.png"></a>
+            <a class="community" href="community.html">community</a>
+            <a class="category" href="Categories.html">category</a>
+            <a class="profile" href="profile.html">
+            <img class='profile' src="images/profile5.jpeg" alt="profile"></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>    <!--navbar end-->
+    
+    <div class="header">
+        <video autoplay muted loop playsinline>
+          <source src="categoryheader.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+        <div class="textoverlay">
+            <h1>CATEGORIES</h1>
+          </div>
+        </div>
+
+            <div class="container mt-4">
+                <div class="row justify-content-center">
+                    <!-- First Card -->
+                    <div class="col-md-4 mt-4 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat1.jpeg" class="card-img-top" alt="cat1">
+                            <div class="card-body">
+                                <h5 class="card-title">Rhythms n Blues</h5>
+                                <p class="card-text">Soul</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Rhythms n Blues"
+                                        data-artists="Daniel Caesar,Wave 2 Earth, SZA" 
+                                        data-images="images/daniel_ceasar.jpeg,images/3.jpg,images/Cat/sza.png"
+                                        data-links="artist1.html,artist2.html,artist3.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--second card -->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat2.png" class="card-img-top" alt="cat2">
+                            <div class="card-body">
+                                <h5 class="card-title">Downer</h5>
+                                <p class="card-text">Depressed? </p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Downer"
+                                        data-artists="Joji,Wave 2 Earth,Jeff Bernat" 
+                                        data-images="images/2.jpg,images/3.jpg,images/Cat/JB.jpg"
+                                        data-links="artist4.html,artist2.html,artist5.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--third card-->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat3.jpg" class="card-img-top" alt="cat3">
+                            <div class="card-body">
+                                <h5 class="card-title">Chill</h5>
+                                <p class="card-text">Take it slow cuh </p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Chill"
+                                        data-artists="Luke Chiang,Bruno Major,Yung Kai " 
+                                        data-images="images/Cat/LC.jpg,images/Cat/BM.jpeg,images/4.jpg"
+                                        data-links="artist6.html,artist7.html,artist8.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth card-->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat4.png" class="card-img-top" alt="cat4">
+                            <div class="card-body">
+                                <h5 class="card-title">Lovefool</h5>
+                                <p class="card-text">Who's on your mind gurl</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="Lovefool"
+                                        data-artists="Beabadoobee,Laufey,Rex Orange County " 
+                                        data-images="images/Cat/bea.jpeg,images/Cat/Laufey.jpeg,images/Cat/ROC.jpeg"
+                                        data-links="artist9.html,artist10.html,artist11.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fifth card-->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat5.jpg" class="card-img-top" alt="cat5">
+                            <div class="card-body">
+                                <h5 class="card-title">K-Pop</h5>
+                                <p class="card-text">nega mande cookie</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="K-Pop"
+                                        data-artists="NewJeans,Kiss of Life,Aespa " 
+                                        data-images="images/Cat/Supernatural.png,images/Cat/KOL.webp,images/Cat/aespa.webp"
+                                        data-links="artist12.html,artist13.html,artist14.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--sixth card-->
+                    <div class="col-md-4 mt-4  d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Cat/Cat6.jpg" class="card-img-top" alt="cat6">
+                            <div class="card-body">
+                                <h5 class="card-title">C-Pop</h5>
+                                <p class="card-text">Mandopop and Chinese R&B</p>
+                                <button class="btn btn-primary show-more-btn" 
+                                        data-genre="C-Pop"
+                                        data-artists="Eric Chou,Firdhaus,JJ Lin" 
+                                        data-images="images/Cat/EricChou.jpg,images/Cat/Firdhaus.jpeg,images/Cat/JJLin.jpg"
+                                        data-links="artist15.html,artist16.html,artist17.html">
+                                    Show More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <!--adding genre card-->
+            <div class="GenreAdd">
+                <div class="col-md-12 mt-5 mb-3 d-flex justify-content-center">
+                    <div class="card d-flex flex-column align-items-center justify-content-center text-center" 
+                        style="width: 50%; height: 10rem; padding: 10px; background-color: rgb(186, 245, 249);">
+                        <h2>Can't find your genre?</h2>
+                        <p>Just add them in!!! We'll process and add it asap.</p>
+                        <button id="openModal" class="genre-btn">
+                            <img src="images/vinyl.png" alt="vinyl" class="genre-btn-img">
+                        </button>
+                    </div>
+                </div>
+            </div>
+                <!--footer here-->
+    <footer class="footer">
+        <p>&copy; 2025 S-RECCER</p>
+        <img src="images/gif4.webp">
+      </footer>
+      <!--footer end-->
+            <!--Modal open-->
+            <div id="genrePopup" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Add New Genre</h2>
+                    <form>
+                        <label for="genreName">Genre Name:</label>
+                        <input type="text" id="genreName" class="input-field" placeholder="Enter genre name">
+            
+                        <label for="genreDesc">Description:</label>
+                        <textarea id="genreDesc" class="input-field" placeholder="Enter description"></textarea>
+            
+                        <div class="artist-container">
+                            <div class="artist-box">
+                                <label>Insert Image:</label>
+                                <input type="text" class="input-field" placeholder="image.png">
+                                <label>Insert Artist Name:</label>
+                                <input type="text" class="input-field" placeholder="Artist Name">
+                                <label>Insert Artist Link:</label>
+                                <input type="text" class="input-field" placeholder="ArtistName.html">
+                            </div>
+                            <div class="artist-box">
+                                <label>Insert Image:</label>
+                                <input type="text" class="input-field" placeholder="image.png">
+                                <label>Insert Artist Name:</label>
+                                <input type="text" class="input-field" placeholder="Artist Name">
+                                <label>Insert Artist Link:</label>
+                                <input type="text" class="input-field" placeholder="ArtistName.html">
+                            </div>
+                            <div class="artist-box">
+                                <label>Insert Image:</label>
+                                <input type="text" class="input-field" placeholder="image.png">
+                                <label>Insert Artist Name:</label>
+                                <input type="text" class="input-field" placeholder="Artist Name">
+                                <label>Insert Artist Link:</label>
+                                <input type="text" class="input-field" placeholder="ArtistName.html">
+                            </div>
+                        </div>
+            
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
 
+            <!-- overlay popup -->
+            <div class="overlay" id="overlay">
+                <div class="popup">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <h2 id="popup-genre"></h2>
+                    <div class="artist-container" id="popup-content"></div>
+                </div>
+            </div>
+
+
+            <div class="back2top">
+                <a href="#" id="Top">
+                    <img src="images/Back2Top.png" alt="Back to Top">
+                </a>
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                    var x = document.getElementById("mySearchBar");
+                    if (x.className === "searchbar") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "searchbar";
+                    }
+                }
+                    function toggleSearchbar() {
+                    var searchbar = document.querySelector('mySearchBar');
+                    if (searchbar.style.display === 'none') {
+                        searchbar.style.display = 'block';
+                    } else {
+                        searchbar.style.display = 'none';
+                        }
+                }
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const overlay = document.getElementById("overlay");
+                    const popupContent = document.getElementById("popup-content");
+                    const popupGenre = document.getElementById("popup-genre");
+                    const modal = document.getElementById("genrePopup");
+                    const closeBtn = document.querySelector(".close");
+            
+                    // Show more genre details
+                    document.querySelectorAll(".show-more-btn").forEach(button => {
+                        button.addEventListener("click", function () {
+                            const genre = this.getAttribute("data-genre");
+                            const artistNames = this.getAttribute("data-artists").split(",");
+                            const artistImages = this.getAttribute("data-images").split(",");
+                            const artistLinks = this.getAttribute("data-links").split(",");
+            
+                            popupContent.innerHTML = ""; // Clear previous content
+                            popupGenre.textContent = genre;
+            
+                            for (let i = 0; i < artistNames.length; i++) {
+                                let artistDiv = document.createElement("div");
+                                artistDiv.innerHTML = `
+                                    <img src="${artistImages[i]}" alt="${artistNames[i]}" class="img-fluid">
+                                    <h5><a href="${artistLinks[i]}" target="_blank">${artistNames[i]}</a></h5>
+                                `;
+                                popupContent.appendChild(artistDiv);
+                            }
+            
+                            overlay.style.display = "flex"; // Show popup
+                        });
+                    });
+            
+                    // Close popup when clicking on overlay (but not on the popup itself)
+                    overlay.addEventListener("click", function (event) {
+                        if (event.target === overlay) {
+                            closePopup();
+                        }
+                    });
+            
+                    // Open "Add New Genre" Modal
+                    document.getElementById("openModal").addEventListener("click", function () {
+                        modal.style.display = "flex";
+                    });
+            
+                    // Close "Add New Genre" Modal
+                    closeBtn.addEventListener("click", function () {
+                        modal.style.display = "none";
+                    });
+            
+                    // Close modal when clicking outside the content
+                    window.addEventListener("click", function (event) {
+                        if (event.target === modal) {
+                            modal.style.display = "none";
+                        }
+                    });
+                });
+            
+                // Close function for genre details popup
+                function closePopup() {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            </script>
+            
     </body>
 </html>
