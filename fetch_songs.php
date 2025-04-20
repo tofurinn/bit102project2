@@ -32,7 +32,7 @@ foreach ($songs as $row) {
                 Your browser does not support the audio element.
             </audio>
             <div class="mt-2">
-                <button class="btn btn-sm btn-warning" onclick="updateSong(' . $row['songID'] . ')">Update</button>
+                <a href="update_song.html?songID=' . $row['songID'] . '" class="btn btn-sm btn-warning">Update</a>
                 <button class="btn btn-sm btn-danger" onclick="deleteSong(' . $row['songID'] . ')">Delete</button>
             </div>
         </div>

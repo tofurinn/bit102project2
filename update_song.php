@@ -1,12 +1,9 @@
 <?php
 require_once 'db_config.php';
 
-if (
-    isset($_POST['songID'], $_POST['songName']) &&
-    !empty($_POST['songID']) &&
-    !empty($_POST['songName'])
-) {
-    $songID = $_POST['songID'];
+$songID = $_GET['songID'] ?? '';
+
+if (!empty($songID) && isset($_POST['songName']) && !empty(trim($_POST['songName']))) {
     $songName = trim($_POST['songName']);
     $songMP3 = null;
     $songImage = null;
@@ -19,7 +16,13 @@ if (
 
         if ($mp3Ext === 'mp3') {
             $songMP3 = 'uploads/mp3/' . uniqid('song_', true) . '.' . $mp3Ext;
+            if (!file_exists('uploads/mp3/')) {
+                mkdir('uploads/mp3/', 0777, true);
+            }
             move_uploaded_file($mp3TmpName, $songMP3);
+        } else {
+            echo 'Invalid MP3 file format';
+            exit;
         }
     }
 
@@ -31,7 +34,13 @@ if (
 
         if (in_array($imageExt, ['jpg', 'jpeg', 'png', 'gif'])) {
             $songImage = 'uploads/images/' . uniqid('image_', true) . '.' . $imageExt;
+            if (!file_exists('uploads/images/')) {
+                mkdir('uploads/images/', 0777, true);
+            }
             move_uploaded_file($imageTmpName, $songImage);
+        } else {
+            echo 'Invalid image file format';
+            exit;
         }
     }
 
@@ -45,7 +54,7 @@ if (
             exit;
         }
 
-        // Update song in the database
+        // Build the update query
         $updateSQL = "UPDATE songs SET songName = ?";
         $params = [$songName];
 
@@ -53,6 +62,7 @@ if (
             $updateSQL .= ", songMP3 = ?";
             $params[] = $songMP3;
         }
+
         if ($songImage) {
             $updateSQL .= ", songImage = ?";
             $params[] = $songImage;
@@ -64,11 +74,17 @@ if (
         $updateStmt = $conn->prepare($updateSQL);
         $updated = $updateStmt->execute($params);
 
-        echo $updated ? 'success' : 'error';
+        if ($updated) {
+            echo 'success';
+        } else {
+            echo 'error: failed to update';
+        }
 
     } catch (PDOException $e) {
-        echo 'error';
+        error_log($e->getMessage());
+        echo 'An error occurred. Please try again later.';
     }
+
 } else {
     echo 'invalid';
 }
