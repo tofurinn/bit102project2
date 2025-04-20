@@ -1,0 +1,89 @@
+<!-- upload_song.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Song</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    h2 {
+      font-weight: bold;
+      text-align: center;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card p-4">
+          <h2 class="mb-4">Upload a Song for Your Favorite Artist</h2>
+
+          <form action="upload_song.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="songName" class="form-label">Song Name</label>
+              <input type="text" name="songName" id="songName" class="form-control" placeholder="Enter song title" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="songImage" class="form-label">Upload Image</label>
+              <input type="file" name="songImage" id="songImage" accept="image/*" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="songMP3" class="form-label">Upload MP3</label>
+              <input type="file" name="songMP3" id="songMP3" accept="audio/mp3" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="artist_id" class="form-label">Select Artist ID</label>
+                <select name="artist_id" id="artist_id" class="form-select" required>
+                <option value="">-- Choose Artist --</option>
+                <option value="1">Daniel Ceasar</option>
+                <option value="2">Wave To Earth</option>
+                <option value="3">SZA</option>
+                <option value="4">Joji</option>
+                <option value="5">Jeff Bernat</option>
+                <option value="6">Luke Chiang</option>
+                <option value="7">Bruno Major</option>
+                <option value="8">Yung Kai</option>
+                <option value="9">Beabadoobee</option>
+                <option value="10">Laufey</option>
+                <option value="11">Rex Orange County</option>
+                <option value="12">Newjeans</option>
+                <option value="13">Kiss of Life</option>
+                <option value="14">Aespa</option>
+                <option value="15">Eric Chou</option>
+                <option value="16">Firdhaus</option>
+                <option value="17">JJ Lin</option>
+                <option value="18">Frank Ocean</option>
+
+              </select>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg">Upload Song</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
