@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php
+session_start();
+$host = "localhost";
+$user = "root"; // Default user in AMPPS
+$password = "mysql"; // Default password in AMPPS
+$database = "sreccer";
+// Create connection
+$conn = new mysqli($host, $user, $password, $database);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -21,7 +34,10 @@
         <div class="topnav" id="myTopnav">
             <a class="menu" href="Menu.php">
                 <img class='logo' src="images/logo2.png"></a>
-            <a class="sign up" href="userpro.php">SIGN IN</a>
+            <a class="community" href="community.php">community</a>
+            <a class="category" href="Categories.html">category</a>
+            <a class="profile" href="profile.php">
+                <img class='profile' src="<?php echo isset($_SESSION['userPic']) ? htmlspecialchars($_SESSION['userPic']) : 'images/default-profile.png'; ?>" alt="profile" onerror="this.src='images/default-profile.png'"></a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>

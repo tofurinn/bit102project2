@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "mysql";
-$dbname = "final_sql";
+$dbname = "sreccer";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {

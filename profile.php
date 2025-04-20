@@ -1,3 +1,23 @@
+<?php
+session_start();
+require 'userdb.php';
+
+// Query the DB to get up-to-date user info
+$stmt = $conn->prepare("SELECT userName, userFullName, userBio, userPic, ticketLeftColor FROM user WHERE userID = ?");
+$stmt->bind_param("s", $userID);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+
+// Check if session variables are set
+  $username = $_SESSION['userName'] ?? "Guest"; // Fallback to "Guest" if not set
+  $userFullName = $_SESSION['userFullName'] ?? "Guest Full Name"; // Fallback to "Guest User" if not set
+  $userBio = $_SESSION['userBio'] ?? "No bio yettt.";
+  $userPic = $_SESSION['userPic'] ?? "images/default.jpeg"; // Updated to use consistent default image
+  $ticketLeftColor = $_SESSION['ticketLeftColor'] ?? "#000000"; // Fallback default color if not set
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +44,7 @@
           <a class="community" href="community.php">community</a>
           <a class="category" href="Categories.html">category</a>
           <a class="profile" href="profile.php">
-            <img class='profile' src="images/profile5.jpeg" alt="profile"></a>
+            <img class='profile' src="<?php echo isset($_SESSION['userPic']) ? htmlspecialchars($_SESSION['userPic']) : 'images/default.jpeg'; ?>" alt="Profile Picture" onerror="this.src='images/default.jpeg'"></a>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
@@ -37,13 +57,13 @@
       <div class="container userprofile">
         <div class="ticket">
             <div class="ticket-left">
-                <img class='profilepic' src="images/profile1.jpeg">
-                <p class="pfname">@yakult lover</p>
+                <img class='profilepic' src="<?php echo $userPic;?>" alt="Profile Picture">
+                <p class="pfname">@<?php echo $username; ?></p>
             </div>
             <div class="ticket-right">
-                <h1>Amber Kyaaa</h1>
+                <h1><?php echo $userFullName;?></h1>
                 <div class="biotxt">
-                    <p>Honestly this page is here to stalk my crushes music taste. lovelovelove. but i fr love frank ocean tho. </p>
+                    <p><?php echo $userBio; ?></p>
                 </div>
                 <div class="bottombtns">
                     <button class="frndbutton" type="button" data-bs-toggle="collapse" href="#frndsection" aria-expanded="false" aria-controls="frndsection">
@@ -64,10 +84,10 @@
             <h3>Friends</h3>
             <div class="friendlist">
             <div class="collapsablecontent">
-              <a class="facecard" href="profile.html">
-              <img src="images/profile5.jpeg" alt="User 1" class="collapsablepfp">
+              <a class="facecard" href="profile2.html">
+              <img src="images/profile1.jpeg" alt="User 1" class="collapsablepfp">
               </a>
-              <span class="collapsablename">@jazzlover</span>
+              <span class="collapsablename">@yakultlover123</span>
           </div>
           <div class="collapsablecontent">
               <a class="facecard" href="profile4.html">
@@ -122,15 +142,63 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
+
     <div class="settings-btn">
-      <a class="settings-btn" title="Edit Profile">
+      <a class="settings-btn" title="Edit Profile" data-bs-toggle="modal" data-bs-target="#profileModal">
         <img src="images/setting_icon.png" alt="Settings">
       </a>
     </div>
+
+  <!--settings button function-->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="profileModalLabel">Edit Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+      <form action="updateprofile.php" method="POST" enctype="multipart/form-data"><!--sends data to updateprofile.php-->
+
+        <div class="mb-3">
+            <label for="bgcolor" class="form-label">Ticket Background Color</label>
+            <input class="form-control form-control-color" type="color" name="bgcolor" id="bgcolor" value="<?php echo $ticketLeftColor; ?>">
+          </div><hr>
+
+        <div class="mb-3">
+            <label for="userPic" class="form-label">Profile Picture</label>
+            <input class="form-control" type="file" name="userPic" id="userPic" accept="image/*">
+          </div><hr>
+          
+        <div class="mb-3">
+            <label for="userFullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="userFullName" value="<?php echo $userFullName; ?>" id="userFullName">
+          </div><hr>
+          
+        <div class="mb-3">
+            <label for="userBio" class="form-label">Profile Bio</label>
+            <textarea class="form-control" name="userBio" id="userBio"><?php echo $userBio; ?></textarea>
+          </div><hr>
+
+          <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+        </form><hr>
+
+        <form action="logout.php" method="POST">
+          <button type="submit" class="btn btn-danger w-100">Log Out</button>
+        </form>
+
+        <form action="deleteacc.php" method="POST" onsubmit="return confirm('Are you sure you want to delete your account? This cannot be undone.');">
+          <button type="submit" name="delete" class="btn btn-danger w-100">Delete Account</button>
+        </form>
+      </div>
+    </div>
   </div>
+</div>
+
+
 </body>
+
     <!--footer here-->
     <footer class="footer">
       <p>&copy; 2025 S-RECCER</p>
@@ -153,7 +221,10 @@
 
 </html>
 <style>
-    .ticket-left {
-        background-color: rgb(219, 46, 46);
-    }
+  .ticket-left {
+    background-color: <?php echo $ticketLeftColor ?? 'hsl(0, 0%, 0%)'; ?>;
+  }
 </style>
+
+
+    
