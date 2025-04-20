@@ -1,0 +1,298 @@
+body {
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+
+.pfp {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+    top: 50%;
+    left: 50%;
+    position:absolute ;
+}
+
+.backg{
+    position: fixed;
+    filter: grayscale(100%);
+    filter: brightness(20%);
+    right: 0;       
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container.userprofile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 50px;
+}
+
+.ticket {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    background-color: #800000;
+    border-radius: 10px;
+    overflow: visible;
+    align-items: center;
+    margin: auto;
+    justify-content: flex-start; 
+    flex-direction: row;
+    top: 5%;
+    /*position: relative;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    background-color: #f5f1da;
+    border-radius: 10px;
+    overflow: visible;
+    justify-content: flex-start; 
+    flex-direction: row;
+    top: 50%;*/
+}
+
+.ticket-left {
+    width: 30%;
+    height: auto;
+    background-color: #800000;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    flex:1;
+}
+
+.pfname {
+    font-size: 2rem;
+    font-family: eagle-gt-ii;
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.profilepic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.facecard:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.ticket-right {
+    background-color: #f5f1da;
+    margin: 0;
+    padding: 20px;
+    width:100%;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: courier;
+    color: #800000;
+    margin-top: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #eb91b4;
+}
+
+.ticket-right p {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #800000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.bottombtns {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border: none;
+    background: none;
+    bottom: 10px;
+    right: 10px;
+    margin-top: 50px;
+}
+
+.bottombtns button:hover{
+    margin-top: auto;
+    background-color: #ffffff;
+    color: white;
+    border-radius: 10px;
+    filter: invert(100%);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+div.bottombtns button{
+    border:none;
+    background: none;
+}
+
+.commsbutton img, .frndbutton img {
+    background: none;
+    flex-direction: row;
+    width: 50px;
+    height: 50px;
+    line-height: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.ticket-right p {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #800000;
+    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+#commssection,#frndsection {
+    width: 100%;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    justify-content: center;
+    transition: height 0.5s ease-in-out;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.card.card-body {
+    background-color: #f5f1da;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#row {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.friend-pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.friendlist{
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+    gap: 15px
+}
+
+.friend{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.communities{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.albumpfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.commslist{
+    gap: 15px;
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    
+}
+
+@media (max-width: 768px) {
+    .ticket {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
+    }
+
+    .ticket-left {
+        width: 100%;
+    }
+
+    .ticket-right {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .bottombtns {
+        flex-direction: row; 
+        margin-top: 30px; 
+    }
+
+    .card.card-body {
+        width: auto;
+        max-width: min-content;
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .friend-name,.album-name{
+        display: none;  
+    }
+
+    .albumpfp  {
+        width: 50px;
+        height: 50px;
+    }
+
+    .friend-pfp{
+        width: 50px;
+        height: 50px;
+    }
+}
