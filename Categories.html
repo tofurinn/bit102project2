@@ -15,17 +15,19 @@
         <style>@import url('https://fonts.cdnfonts.com/css/trashbox');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/sf-automaton');</style>
         <style>@import url('https://fonts.cdnfonts.com/css/lexend');</style>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     </head>
     <body>
         <!--navbar start-->
         <div class="topnav" id="myTopnav">
-            <a class="menu" href="Menu.html">
+            <a class="menu" href="Menu.php">
             <img class='logo' src="images/logo2.png"></a>
-            <a class="community" href="community.html">community</a>
+            <a class="community" href="community.php">community</a>
             <a class="category" href="Categories.html">category</a>
-            <a class="profile" href="profile.html">
+            <a class="profile" href="profile.php">
             <img class='profile' src="images/profile5.jpeg" alt="profile"></a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -149,8 +151,13 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="container row justify-content-center" id="genreContainer" style="padding: 0%;">
+
+                    </div>
                 </div>
             </div>
+
             <!--adding genre card-->
             <div class="GenreAdd">
                 <div class="col-md-12 mt-5 mb-3 d-flex justify-content-center">
@@ -164,6 +171,7 @@
                     </div>
                 </div>
             </div>
+
                 <!--footer here-->
     <footer class="footer">
         <p>&copy; 2025 S-RECCER</p>
@@ -174,38 +182,87 @@
             <div id="genrePopup" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <h2>Add New Genre</h2>
-                    <form>
+                    <h2>Add New Genre</h2> 
+                    <form action="add_genre.php" method="POST">
                         <label for="genreName">Genre Name:</label>
-                        <input type="text" id="genreName" class="input-field" placeholder="Enter genre name">
+                        <input type="text" id="genreName" name="genreName" class="input-field" placeholder="Enter genre name" required>
             
                         <label for="genreDesc">Description:</label>
-                        <textarea id="genreDesc" class="input-field" placeholder="Enter description"></textarea>
+                        <textarea id="genreDesc" name="genreDesc" class="input-field" placeholder="Enter description" required></textarea>
             
                         <div class="artist-container">
                             <div class="artist-box">
-                                <label>Insert Image:</label>
-                                <input type="text" class="input-field" placeholder="image.png">
-                                <label>Insert Artist Name:</label>
-                                <input type="text" class="input-field" placeholder="Artist Name">
-                                <label>Insert Artist Link:</label>
-                                <input type="text" class="input-field" placeholder="ArtistName.html">
+                                <label>Select Artist:</label>
+                                <select class="input-field" name="artistIDs[]">
+                                    <option value="">-- Choose Artist --</option>
+                                    <option value="1">Daniel Ceasar</option>
+                                    <option value="2">Wave to Earth</option>
+                                    <option value="3">SZA</option>
+                                    <option value="4">Joji</option>
+                                    <option value="5">Jeff Bernat</option>
+                                    <option value="6">Luke Chiang</option>
+                                    <option value="7">Bruno Major</option>
+                                    <option value="8">Yung Kai</option>
+                                    <option value="9">Beabadoobee</option>
+                                    <option value="10">Laufey</option>
+                                    <option value="11">Rex Orange County</option>
+                                    <option value="12">New Jeans</option>
+                                    <option value="13">Kiss of Life</option>
+                                    <option value="14">Aespa</option>
+                                    <option value="15">Eric Chou</option>
+                                    <option value="16">Firdhaus</option>
+                                    <option value="17">JJ Lin</option>
+                                    <option value="18">Frank Ocean</option>
+                                </select>
                             </div>
                             <div class="artist-box">
-                                <label>Insert Image:</label>
-                                <input type="text" class="input-field" placeholder="image.png">
-                                <label>Insert Artist Name:</label>
-                                <input type="text" class="input-field" placeholder="Artist Name">
-                                <label>Insert Artist Link:</label>
-                                <input type="text" class="input-field" placeholder="ArtistName.html">
+                                <label>Select Artist:</label>
+                                <select class="input-field" name="artistIDs[]">
+                                    <option value="">-- Choose Artist --</option>
+                                    <option value="1">Daniel Ceasar</option>
+                                    <option value="2">Wave to Earth</option>
+                                    <option value="3">SZA</option>
+                                    <option value="4">Joji</option>
+                                    <option value="5">Jeff Bernat</option>
+                                    <option value="6">Luke Chiang</option>
+                                    <option value="7">Bruno Major</option>
+                                    <option value="8">Yung Kai</option>
+                                    <option value="9">Beabadoobee</option>
+                                    <option value="10">Laufey</option>
+                                    <option value="11">Rex Orange County</option>
+                                    <option value="12">New Jeans</option>
+                                    <option value="13">Kiss of Life</option>
+                                    <option value="14">Aespa</option>
+                                    <option value="15">Eric Chou</option>
+                                    <option value="16">Firdhaus</option>
+                                    <option value="17">JJ Lin</option>
+                                    <option value="18">Frank Ocean</option>
+                                    <!-- Add more artists here manually or dynamically later -->
+                                </select>
                             </div>
                             <div class="artist-box">
-                                <label>Insert Image:</label>
-                                <input type="text" class="input-field" placeholder="image.png">
-                                <label>Insert Artist Name:</label>
-                                <input type="text" class="input-field" placeholder="Artist Name">
-                                <label>Insert Artist Link:</label>
-                                <input type="text" class="input-field" placeholder="ArtistName.html">
+                                <label>Select Artist:</label>
+                                <select class="input-field" name="artistIDs[]">
+                                    <option value="">-- Choose Artist --</option>
+                                    <option value="1">Daniel Ceasar</option>
+                                    <option value="2">Wave to Earth</option>
+                                    <option value="3">SZA</option>
+                                    <option value="4">Joji</option>
+                                    <option value="5">Jeff Bernat</option>
+                                    <option value="6">Luke Chiang</option>
+                                    <option value="7">Bruno Major</option>
+                                    <option value="8">Yung Kai</option>
+                                    <option value="9">Beabadoobee</option>
+                                    <option value="10">Laufey</option>
+                                    <option value="11">Rex Orange County</option>
+                                    <option value="12">New Jeans</option>
+                                    <option value="13">Kiss of Life</option>
+                                    <option value="14">Aespa</option>
+                                    <option value="15">Eric Chou</option>
+                                    <option value="16">Firdhaus</option>
+                                    <option value="17">JJ Lin</option>
+                                    <option value="18">Frank Ocean</option>
+                                </select>
                             </div>
                         </div>
             
@@ -213,7 +270,7 @@
                     </form>
                 </div>
             </div>
-
+            
             <!-- overlay popup -->
             <div class="overlay" id="overlay">
                 <div class="popup">
@@ -223,97 +280,218 @@
                 </div>
             </div>
 
-
             <div class="back2top">
                 <a href="#" id="Top">
                     <img src="images/Back2Top.png" alt="Back to Top">
                 </a>
             </div>
-            <script>
-                function myFunction() {
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "topnav";
-                    }
-                    var x = document.getElementById("mySearchBar");
-                    if (x.className === "searchbar") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "searchbar";
-                    }
-                }
-                    function toggleSearchbar() {
-                    var searchbar = document.querySelector('mySearchBar');
-                    if (searchbar.style.display === 'none') {
-                        searchbar.style.display = 'block';
-                    } else {
-                        searchbar.style.display = 'none';
-                        }
-                }
 
-                document.addEventListener("DOMContentLoaded", function () {
-                    const overlay = document.getElementById("overlay");
-                    const popupContent = document.getElementById("popup-content");
-                    const popupGenre = document.getElementById("popup-genre");
-                    const modal = document.getElementById("genrePopup");
-                    const closeBtn = document.querySelector(".close");
+            <button type="button" class="btn btn-danger btn-lg fixed-bottom left-0 mb-3 ml-3" id="deleteGenreBtn"
+            data-toggle="modal" data-target="#deleteGenreModal" style="width: 8%;">
+            Delete Genre
+        </button>
+        
+        <!-- Modal for Delete Genre -->
+        <div class="modal fade" id="deleteGenreModal" tabindex="-1" role="dialog" aria-labelledby="deleteGenreModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteGenreModalLabel">Delete Genre?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Dropdown to select genre -->
+                        <label for="genreSelect">Choose a genre to delete:</label>
+                        <select id="deleteGenre" class="form-control">
+                            <option value="">Select Genre</option>
+                            <!-- New genres will be added here -->
+                        </select>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" id="deleteGenreBtn2">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                // ✅ Bind existing buttons (e.g. hardcoded ones in HTML)
+                bindShowMoreButtons();
             
-                    // Show more genre details
-                    document.querySelectorAll(".show-more-btn").forEach(button => {
-                        button.addEventListener("click", function () {
-                            const genre = this.getAttribute("data-genre");
-                            const artistNames = this.getAttribute("data-artists").split(",");
-                            const artistImages = this.getAttribute("data-images").split(",");
-                            const artistLinks = this.getAttribute("data-links").split(",");
-            
-                            popupContent.innerHTML = ""; // Clear previous content
-                            popupGenre.textContent = genre;
-            
-                            for (let i = 0; i < artistNames.length; i++) {
-                                let artistDiv = document.createElement("div");
-                                artistDiv.innerHTML = `
-                                    <img src="${artistImages[i]}" alt="${artistNames[i]}" class="img-fluid">
-                                    <h5><a href="${artistLinks[i]}" target="_blank">${artistNames[i]}</a></h5>
-                                `;
-                                popupContent.appendChild(artistDiv);
-                            }
-            
-                            overlay.style.display = "flex"; // Show popup
-                        });
+                // ✅ Then fetch and rebind newly loaded buttons
+                fetch('genre_display.php')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('genreContainer').innerHTML = data;
+                        bindShowMoreButtons(); // ✅ Re-bind for new cards
+                    })
+                    .catch(error => {
+                        console.error('Error loading genres:', error);
                     });
+            });
             
-                    // Close popup when clicking on overlay (but not on the popup itself)
-                    overlay.addEventListener("click", function (event) {
-                        if (event.target === overlay) {
-                            closePopup();
+            // ✅ Move this OUTSIDE so it's globally available
+            function bindShowMoreButtons() {
+                const overlay = document.getElementById("overlay");
+                const popupContent = document.getElementById("popup-content");
+                const popupGenre = document.getElementById("popup-genre");
+            
+                document.querySelectorAll(".show-more-btn").forEach(button => {
+                    button.addEventListener("click", function () {
+                        const genre = this.getAttribute("data-genre");
+                        const artistNames = this.getAttribute("data-artists").split(",");
+                        const artistImages = this.getAttribute("data-images").split(",");
+                        const artistLinks = this.getAttribute("data-links").split(",");
+            
+                        popupContent.innerHTML = "";
+                        popupGenre.textContent = genre;
+            
+                        for (let i = 0; i < artistNames.length; i++) {
+                            let artistDiv = document.createElement("div");
+                            artistDiv.classList.add("mb-3");
+                            artistDiv.innerHTML = `
+                                <img src="${artistImages[i]}" alt="${artistNames[i]}" class="img-fluid mb-2">
+                                <h5><a href="${artistLinks[i]}" target="_blank">${artistNames[i]}</a></h5>
+                            `;
+                            popupContent.appendChild(artistDiv);
                         }
-                    });
             
-                    // Open "Add New Genre" Modal
-                    document.getElementById("openModal").addEventListener("click", function () {
-                        modal.style.display = "flex";
-                    });
-            
-                    // Close "Add New Genre" Modal
-                    closeBtn.addEventListener("click", function () {
-                        modal.style.display = "none";
-                    });
-            
-                    // Close modal when clicking outside the content
-                    window.addEventListener("click", function (event) {
-                        if (event.target === modal) {
-                            modal.style.display = "none";
-                        }
+                        overlay.style.display = "flex";
                     });
                 });
+            }
             
-                // Close function for genre details popup
-                function closePopup() {
-                    document.getElementById("overlay").style.display = "none";
+            // ✅ Event listener for clicking the overlay to close
+            document.addEventListener("DOMContentLoaded", function () {
+                const overlay = document.getElementById("overlay");
+                const closeBtn = document.querySelector(".close-btn");
+            
+                overlay.addEventListener("click", function (event) {
+                    if (event.target === overlay) {
+                        closePopup();
+                    }
+                });
+            
+                if (closeBtn) {
+                    closeBtn.addEventListener("click", closePopup);
                 }
-            </script>
+            });
             
-    </body>
+            //close popup function
+            function closePopup() {
+                document.getElementById("overlay").style.display = "none";
+            }
+        
+            $('#deleteGenreBtn').on('click', function() {
+                fetchGenresForDeletion();  // make sure this is being called
+            });
+        
+            // new function to fetch genres for the delete dropdown
+            function fetchGenresForDeletion() {
+                console.log('fetchGenresForDeletion function called');  // check if the function is being called
+        
+                $.ajax({
+                    url: 'genre_display.php',  // ensure this is the correct path to your PHP file
+                    type: 'GET',
+                    data: { action: 'fetch_genres' },  // fetch genres
+                    success: function(response) {
+                        console.log(response);  // check what response we get
+        
+                        var genres = JSON.parse(response);  // parse the json response
+                        var dropdown = $('#deleteGenre');  // the genre dropdown element
+        
+                        // clear existing options in the dropdown
+                        dropdown.empty();
+        
+                        // add a default 'Select Genre' option
+                        dropdown.append('<option value="">Select Genre</option>');
+        
+                        // Check if genres is an array and if there are genres to display
+                        if (Array.isArray(genres) && genres.length > 0) {
+                            genres.forEach(function(genre) {
+                                // Populate dropdown with genres
+                                dropdown.append('<option value="' + genre.catID + '">' + genre.catName + '</option>');
+                            });
+                        } else {
+                            // If no genres found, show a placeholder
+                            dropdown.append('<option value="">No genres available</option>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching genres:', status, error);  // Log error in case of failure
+                    }
+                });
+            }
+            $('#deleteGenreBtn2').on('click', function() {
+    const selectedGenreID = $('#deleteGenre').val(); // Get the selected genre ID
+
+    if (selectedGenreID) {
+        // Send the AJAX request to delete the genre
+        $.ajax({
+            url: 'genre_display.php',  // This is where the deletion is processed
+            type: 'POST',
+            data: {
+                action: 'delete_genre',  // Action type to delete genre
+                catID: selectedGenreID   // The selected genre ID to delete
+            },
+            success: function(response) {
+                var res = JSON.parse(response);
+                if (res.status == 'success') {
+                    // Show success message
+                    alert(res.message);
+                    $('#deleteGenreModal').modal('hide'); // Close the modal
+                    location.reload(); // Refresh the page to reflect the deletion
+                } else {
+                    alert(res.message); // Show error message if there was a problem
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error deleting genre:', status, error);
+                alert("Error deleting genre.");
+            }
+        });
+    } else {
+        alert("Please select a genre to delete.");  // Ensure a genre is selected
+    }
+});
+        
+            // Ensure modal functionality is intact
+            document.addEventListener("DOMContentLoaded", function () {
+                const modal = document.getElementById("genrePopup");
+                const openModalBtn = document.getElementById("openModal");
+                const closeGenreBtn = document.querySelector(".close-btn-genre");
+                const closeSpanBtn = document.querySelector("#genrePopup .close");
+        
+                if (closeSpanBtn) {
+                    closeSpanBtn.addEventListener("click", function () {
+                        modal.style.display = "none";
+                    });
+                }
+        
+                if (openModalBtn && modal) {
+                    openModalBtn.addEventListener("click", function () {
+                        modal.style.display = "flex";
+                        fetchGenresForDeletion(); // Fetch genres for the delete dropdown when opening the modal
+                    });
+                }
+        
+                if (closeGenreBtn && modal) {
+                    closeGenreBtn.addEventListener("click", function () {
+                        modal.style.display = "none";
+                    });
+                }
+        
+                window.addEventListener("click", function (event) {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+        </script>
+        
+        </body>
 </html>

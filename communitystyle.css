@@ -19,15 +19,15 @@
 
 /*new navbar start*/
 .topnav {
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.80);
     border-bottom: 2px solid rgb(0,0,0);
     text-align: center;
     vertical-align: middle;
-    z-index:1001;
-    margin: 0;
-    top:0;
   }
   .topnav a {
     font-family: 'sf automaton', sans-serif;
@@ -143,11 +143,14 @@ video {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     margin-top: 0;
 }
-.header{
+.header {
     position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
 }
 div.textoverlay{
     position:absolute;
@@ -186,10 +189,9 @@ h2{
     margin-bottom: 10px;
     margin-left:10px;
 }
-.container{
-    display: inline-block;
-    flex-direction: row;
-    width: 100vw;
+.container {
+    margin-top: 20px;
+    padding: 0 15px;
 }
 /* right container overall style*/
 div.col-md-4.col-12.position-sticky{
@@ -228,7 +230,8 @@ div.col-md-8.col-12{
 /*left container overally style end*/
 
 /*right container items*/
-.btn.btn-warning.w-100{
+.btn.btn-warning.w-100 {
+    margin-bottom: 20px;
     font-family: 'SF automaton', sans-serif;
     background-color: hsl(0, 100%, 50%);
     border: 2px solid #e81d1d;
@@ -243,7 +246,8 @@ div.col-md-8.col-12{
     background-color: rgb(25, 0, 255);
     border: 2px solid hsl(243, 100%, 67%);
 }
-.joined{
+.joined {
+    margin-top: 0;
     position:sticky;
     
 }
@@ -291,7 +295,7 @@ div.col-md-8.col-12{
 }
 
 .artistpic {
-    width: 30spx; 
+    width: 30px; 
     height: 30px; 
     border-radius: 50%;
     margin-right: 5px;
@@ -318,6 +322,7 @@ div.col-md-8.col-12{
     margin-bottom: 20px;
     position: relative;
 }
+
 ul.explorenav {
     list-style-type: none;
     align-items: center;
@@ -335,78 +340,191 @@ ul.explorenav {
     text-decoration: none;
     align-items: center;
 }
+.explorenav li a:hover{
+    color: #ffdd00;
+}
 .explore {
-    background-color:rgb(240, 244, 255);
+    background-color: rgb(240, 244, 255);
     display: flex;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid rgba(0, 27, 232, 0.302);
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 27, 232, 0.302);
     margin-bottom: 20px;
     position: relative;
+    gap: 20px;
 }
+
+#posts-container {
+    margin-top: 20px;
+}
+
 .profile-picture {
     width: 50px;
     height: 50px;
+    min-width: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
 }
-.profile-picture img{
+
+.profile-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-} 
-.post-content{
+}
+
+.post-content {
     flex: 1;
-    position: relative;
-    padding-bottom: 40px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
-.username{
-    padding-bottom: 2%;
-    border-bottom: 1.5px solid black;
+
+.username {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1.5px solid rgba(0, 0, 0,);
+    width: 100%;
 }
-.username a{
+
+.username a {
     color: black;
     font-family: 'lexend', sans-serif;
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
 }
-.post-title{
+
+.post-title {
     font-family: 'Lexend', sans-serif;
     font-size: 16px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
 }
-.post-text{
+
+.post-text {
     font-size: 15px;
     font-family: 'Lexend', sans-serif;
     font-weight: 200;
     line-height: 1.5;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#comments {
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.comment-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.comment-profile-picture {
+    display: flex;
+    vertical-align: top;
+}
+
+.comment-profile-picture img {
+    float: left;
+    margin-right: 10px;
+}
+
+/* Add this for the comment toggle button */
+.comment-toggle {
+    font-family: 'SF automaton', sans-serif;
+    background-color: rgb(0, 232, 74);
+    border: 2px solid hsl(122, 100%, 89%);
+    font-size: 13px;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.comment-toggle:hover {
+    background-color: rgb(0, 232, 74);
+    border: 2px solid hsl(122, 100%, 89%);
+}
+
+.comment {
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.comment-toggle {
+    margin-bottom: 10px;
+    font-size: 13px;
+    padding: 4px 12px;
+}
+
+.profile-picture img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.post-text {
+    font-size: 15px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.comment-form {
+    margin-bottom: 20px;
+}
+
+.comment-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(0, 27, 232, 0.302);
+    border-radius: 8px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.comment-form input[type="submit"] {
+    position: relative;
+    z-index: 2;
     margin-bottom: 5px;
 }
-div.post-content input.post {
+
+/* Style for the horizontal line */
+.comment::after {
+    content: '';
+    display: block;
     width: 100%;
-    height: 50px;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid rgba(0, 27, 232, 0.302);
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    height: 1px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
 }
-div.post-content input.comment {
-    width: 100%;
-    height: 50px;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid rgba(0, 27, 232, 0.302);
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-div.post-content button.btn-outline-warning {
+
+/* Style for all post buttons */
+div.post-content button.btn-outline-warning, div.comment a.btn.btn-outline-warning#post-comment, div.post-content input[type="submit"], div.comment-form input[type="submit"] {
     font-family: 'SF automaton', sans-serif;
     background-color: hsl(334, 100%, 81%);
     border: 2px solid #ff8fb6;
@@ -415,14 +533,22 @@ div.post-content button.btn-outline-warning {
     width: 115px;
     color: #fff;
     padding: 3px 10px;
+    margin: 10px 0;
     border-radius: 5px;
     cursor: pointer;
+    float: left;
 }
-  
-div.post-content button.btn-outline-warning:hover {
-    background-color: rgb(44, 254, 244);
-    border: 2px solid hsl(173, 100%, 66%);
+
+/* Hover state for all post buttons */
+div.post-content button.btn-outline-warning:hover,
+div.comment a.btn.btn-outline-warning#post-comment:hover,
+div.post-content input[type="submit"]:hover,
+div.comment-form input[type="submit"]:hover {
+    background-color: hsl(334, 100%, 81%);
+    border: 2px solid #ff8fb6;
 }
+
+/* Comment button styling */
 div.comment a.btn-warning {
     font-family: 'SF automaton', sans-serif;
     background-color: rgb(0, 232, 74);
@@ -434,18 +560,18 @@ div.comment a.btn-warning {
     padding: 3px 10px;
     border-radius: 5px;
     cursor: pointer;
-   
+    float: right;
 }
-  
+
 div.comment a.btn-warning:hover {
     background-color: rgb(0, 232, 74);
     border: 2px solid hsl(122, 100%, 89%);
 }
-.post-content button.btn-outline-warning, .comment a.btn-warning {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    margin-top: 20px;
+
+/* Remove any conflicting styles */
+.post-content button.btn-outline-warning {
+    position: relative;
+    margin-top: 10px;
 }
 footer{
     background-color: black;
@@ -460,3 +586,196 @@ footer{
     text-align: center;
 }
 /*end of explore forum area*/
+
+/* Post dropdown toggle styling */
+.actions .dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+.actions .dropdown-toggle:hover {
+    color: #333;
+}
+
+.actions .dropdown-toggle i {
+    font-size: 16px;
+}
+
+.actions .dropdown-menu {
+    min-width: 120px;
+    padding: 5px 0;
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.actions .dropdown-item {
+    padding: 8px 15px;
+    color: #333;
+    transition: background-color 0.2s;
+    font-weight: 800;
+}
+
+.actions .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.actions .dropdown-item.delete-post {
+    color: #dc3545;
+}
+
+.actions .dropdown-item.delete-post:hover {
+    background-color: #fff5f5;
+}
+.a.dropdown-item.delete-comment {
+    color:#e81d1d;
+}
+/* Ensure the username and dropdown are properly aligned */
+.username > div {
+    width: 100%;
+    border-bottom: 1.5px solid rgba(0, 0, 0)
+}
+
+/* Create post form styling */
+#create-post-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(0, 27, 232, 0.302);
+    border-radius: 5px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+}
+
+#create-post-form input[name="title"] {
+    font-weight: 600;
+}
+
+#create-post-form input[name="content"] {
+    min-height: 60px;
+    margin-bottom: 15px;
+}
+
+#create-post-form input::placeholder {
+    color: #666;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Post button styling update */
+#create-post-form input[type="submit"] {
+    font-family: 'SF automaton', sans-serif;
+    background-color: hsl(334, 100%, 81%);
+    border: 2px solid #ff8fb6;
+    font-size: 13px;
+    letter-spacing: 2px;
+    width: 115px;
+    color: #fff;
+    padding: 3px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+#create-post-form input[type="submit"]:hover {
+    background-color: hsl(334, 100%, 81%);
+    border: 2px solid #ff8fb6;
+    opacity: 0.9;
+}
+
+/* Edit mode styling */
+.edit-post-title,
+.edit-post-content,
+.edit-comment-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(0, 27, 232, 0.302);
+    border-radius: 8px;
+    font-family: 'Lexend', sans-serif;
+    background-color: white;
+}
+
+.edit-post-title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.edit-post-content {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.edit-comment-input {
+    min-height: 40px;
+    resize: vertical;
+    margin: 5px 0;
+}
+
+/* Save button styling */
+.save-post-edit,
+.save-comment-edit {
+    font-family: 'SF automaton', sans-serif;
+    background-color: hsl(334, 100%, 81%);
+    border: 2px solid #ff8fb6;
+    font-size: 13px;
+    letter-spacing: 2px;
+    width: 115px;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.save-post-edit:hover,
+.save-comment-edit:hover {
+    background-color: hsl(334, 100%, 75%);
+    transform: translateY(-1px);
+}
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  background: transparent;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.search-button:hover {
+  color: #ff8fb6;
+}
+
+.search-button i {
+  font-size: 16px;
+}
